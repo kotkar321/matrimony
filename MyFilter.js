@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$(".custom-control-input").click(function(){
-		$(".all").show();
+		$(".all").fadeIn(3000);
 		
 		var gotra;
 		if (!$('#checkKashayp').is(":checked") && !$('#checkKhalap').is(":checked") && !$('#checkMandav').is(":checked")
