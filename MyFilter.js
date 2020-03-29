@@ -65,6 +65,27 @@ $(document).ready(function(){
 			console.log('all City false');
 		}
 		
+		if ($('#checkDoctor').is(":checked") || $('#checkEngineer').is(":checked") || $('#checkCA').is(":checked")) {
+			//pune
+			if ($('#checkDoctor').is(":checked")) 
+				console.log('your message');
+			else
+				$(".Doctor").hide();
+								
+			//Mumbai
+			if ($('#checkEngineer').is(":checked")) 
+				console.log('your message');
+			else
+				$(".Engineer").hide();
+			
+			//Nagpur
+			if ($('#checkCA').is(":checked")) 
+				console.log('your message');	
+			else
+				$(".CA").hide();
+		} else {
+			console.log('all occupation false');
+		}
 		
 	});
 });
