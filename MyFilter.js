@@ -8,22 +8,22 @@ $(document).ready(function(){
 			gotra = true;
 		} else {
 			if (!$('#checkKashayp').is(":checked")) 
-				$(".Kashayp").hide();	
+				$(".Kashayp").fadeOut("slow");
 			
 			if (!$('#checkKhalap').is(":checked")) 
-				$(".Khalap").hide();	
+				$(".Khalap").fadeOut("slow");
 			
 			if (!$('#checkMandav').is(":checked")) 
-				$(".Mandav").hide();	
+				$(".Mandav").fadeOut("slow");
 			
 			if (!$('#checkGahilam').is(":checked")) 
-				$(".Gahilam").hide();	
+				$(".Gahilam").fadeOut("slow");
 			
 			if (!$('#checkGautam').is(":checked")) 
-				$(".Gautam").hide();	
+				$(".Gautam").fadeOut("slow");
 			
 			if (!$('#checkLokaksha').is(":checked")) 
-				$(".Lokaksha").hide();
+				$(".Lokaksha").fadeOut("slow");
 		}
 		
 		if (!$('#checkPune').is(":checked") && !$('#checkMumbai').is(":checked") && !$('#chceckNagpur').is(":checked")
@@ -32,19 +32,19 @@ $(document).ready(function(){
 		} else {
 			//pune
 			if (!$('#checkPune').is(":checked")) 
-				$(".Pune").hide();
+				$(".Pune").fadeOut("slow");
 								
 			//Mumbai
 			if (!$('#checkMumbai').is(":checked")) 
-				$(".Mumbai").hide();
+				$(".Mumbai").fadeOut("slow");
 			
 			//Nagpur
 			if (!$('#checkNagpur').is(":checked")) 
-				$(".Nagpur").hide();
+				$(".Nagpur").fadeOut("slow");
 			
 			//Nasik
 			if (!$('#checkNasik').is(":checked")) 
-				$(".Nasik").hide();
+				$(".Nasik").fadeOut("slow");
 			
 		}
 		
@@ -53,22 +53,19 @@ $(document).ready(function(){
 		} else {
 			//pune
 			if (!$('#checkDoctor').is(":checked")) 
-				$(".Doctor").hide();
+				$(".Doctor").fadeOut("slow");
 								
 			//Mumbai
 			if (!$('#checkEngineer').is(":checked")) 
-				$(".Engineer").hide();
+				$(".Engineer").fadeOut("slow");
 			
 			//Nagpur
 			if (!$('#checkCA').is(":checked")) 
-				$(".CA").hide();
+				$(".CA").fadeOut("slow");
 		}
 	});
 });
 
-$(function(){
-	$("#includedContent").load("grooms.html");
-});
 
 	
 			
