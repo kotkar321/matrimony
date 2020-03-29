@@ -4,7 +4,7 @@ $(document).ready(function(){
 		var gotra;
 		if (!$('#checkKashayp').is(":checked") && !$('#checkKhalap').is(":checked") && !$('#checkMandav').is(":checked")
 			&& !$('#checkGahilam').is(":checked") && !$('#checkGautam').is(":checked") && !$('#checkLokaksha').is(":checked")) {
-			gotra = true;
+			alert("1");
 		} else {
 			if (!$('#checkKashayp').is(":checked")) 
 				$(".Kashayp").hide();
@@ -27,7 +27,7 @@ $(document).ready(function(){
 		
 		if (!$('#checkPune').is(":checked") && !$('#checkMumbai').is(":checked") && !$('#chceckNagpur').is(":checked")
 			&& !$('#checkNasik').is(":checked")) {
-			gotra = true;
+			alert("2");
 		} else {
 			//pune
 			if (!$('#checkPune').is(":checked")) 
@@ -48,7 +48,7 @@ $(document).ready(function(){
 		}
 		
 		if (!$('#checkDoctor').is(":checked") && !$('#checkEngineer').is(":checked") && !$('#checkCA').is(":checked")) {
-			gotra = true;
+			alert("3");
 		} else {
 			//pune
 			if (!$('#checkDoctor').is(":checked")) 
@@ -64,3 +64,7 @@ $(document).ready(function(){
 		}
 	});
 });
+
+
+	
+			
