@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$(".custom-control-input").click(function(){
 		$(".all").show();
-		var gotra;
+		
 		if (!$('#checkKashayp').is(":checked") && !$('#checkKhalap').is(":checked") && !$('#checkMandav').is(":checked")
 			&& !$('#checkGahilam').is(":checked") && !$('#checkGautam').is(":checked") && !$('#checkLokaksha').is(":checked")) {
 			alert("1");
