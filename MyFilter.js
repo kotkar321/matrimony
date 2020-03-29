@@ -2,8 +2,7 @@ $(document).ready(function(){
 	$(".custom-control-input").click(function(){
 		$(".all").show();
 
-		if ($('#checkKashayp').is(":checked") || $('#checkKhalap').is(":checked") || $('#checkMandav').is(":checked")
-			|| $('#checkGahilam').is(":checked") || $('#checkGautam').is(":checked") || $('#checkLokaksha').is(":checked")) {
+		if ($('#checkKashayp').is(":checked") || $('#checkKhalap').is(":checked") || $('#checkMandav').is(":checked") || $('#checkGahilam').is(":checked") || $('#checkGautam').is(":checked") || $('#checkLokaksha').is(":checked")) {
 			if ($('#checkKashayp').is(":checked")) 
 				console.log('your message');
 			else
@@ -37,8 +36,7 @@ $(document).ready(function(){
 			console.log('all gotra false');
 		}
 		
-		if ($('#checkPune').is(":checked") || $('#checkMumbai').is(":checked") || $('#chceckNagpur').is(":checked")
-			|| $('#checkNasik').is(":checked")) {
+		if ($('#checkPune').is(":checked") || $('#checkMumbai').is(":checked") || $('#chceckNagpur').is(":checked") || $('#checkNasik').is(":checked")) {
 			//pune
 			if ($('#checkPune').is(":checked")) 
 				console.log('your message');
