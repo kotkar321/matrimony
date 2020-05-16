@@ -3,7 +3,7 @@ $(document).ready(function(){
 	
 	
 	$(function(){
-		var limit = 10005;
+		var limit = 10002;
 		for (i = 10001; i < limit; i++) {
 			var file =  i + '.html';
 			$("#profiles").load(file);
