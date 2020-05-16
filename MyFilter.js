@@ -3,15 +3,11 @@ $(document).ready(function(){
 	
 	
 	$(function(){
-		var includes = $('[data-include]');
 		var limit = 10005;
-		jQuery.each(includes, function(){
-		  for (i = 10001; i < limit; i++) {
+		for (i = 10001; i < limit; i++) {
 			var file =  i + '.html';
-			var data = $(this).load(file);
-			alert(data);
+			$("#").load("demo_test.txt");
 		}
-		});
 	});
 	
 	
