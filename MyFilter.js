@@ -2,7 +2,7 @@ $(document).ready(function(){
 	
 	
 	$("#header").load("Header");
-	$("#profiles").load("Filter");
+	$("#filter").load("Filter");
 	$("#footer").load("Footer");
 	
 	$(".custom-control-input").click(function(){
