@@ -1,15 +1,10 @@
 $(document).ready(function(){
 	
 	
-	var limit = 10004;
-	for (i = 10001; i < limit; i++) {
-		var file =  i + '.html';
-		var data1 = $("#profiles").html();
-		$("#profiles").load(file);
-		var data2 = $("#profiles").html();
-		$("#profiles").html(data1 + data2);
-	}
-
+	$("#header").load("Header");
+	$("#profiles").load("Filter");
+	$("#footer").load("Footer");
+	
 	$(".custom-control-input").click(function(){
 		$(".all").show();
 		if ($('#checkKashayp').is(":checked") || $('#checkKhalap').is(":checked") || $('#checkMandav').is(":checked") || $('#checkGahilam').is(":checked") || $('#checkGautam').is(":checked") || $('#checkLokaksha').is(":checked")) {
