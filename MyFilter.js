@@ -6,7 +6,7 @@ $(document).ready(function(){
 		var limit = 10005;
 		for (i = 10001; i < limit; i++) {
 			var file =  i + '.html';
-			$("#").load("demo_test.txt");
+			$("#profiles").load(file);
 		}
 	});
 	
