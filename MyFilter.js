@@ -4,8 +4,10 @@ $(document).ready(function(){
 	var limit = 10004;
 	for (i = 10001; i < limit; i++) {
 		var file =  i + '.html';
-		var data = $("#profiles").html();
-		$("#profiles").load(data + file);
+		var data1 = $("#profiles").html();
+		$("#profiles").load(file);
+		var data2 = $("#profiles").html();
+		$("#profiles").html(data1 + data2);
 	}
 
 	$(".custom-control-input").click(function(){
