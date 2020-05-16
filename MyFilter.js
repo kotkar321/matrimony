@@ -1,16 +1,5 @@
 $(document).ready(function(){
 
-  	$("#loadAllGrooms").click(function(){
-    		$("#Profiles").load("Profiles_Groom.html", function(responseTxt, statusTxt, xhr){
-      		if(statusTxt == "success")
-        		console.log("External content loaded successfully!");
-      		if(statusTxt == "error")
-        		console.log("Error: " + xhr.status + ": " + xhr.statusText);
-    		});
-  	});
-
-	
-	
 	$(".custom-control-input").click(function(){
 		$(".all").show();
 		if ($('#checkKashayp').is(":checked") || $('#checkKhalap').is(":checked") || $('#checkMandav').is(":checked") || $('#checkGahilam').is(":checked") || $('#checkGautam').is(":checked") || $('#checkLokaksha').is(":checked")) {
