@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	
 
   	$("#loadAllGrooms").click(function(){
     		$("#Profiles").load("Profiles_Groom.html", function(responseTxt, statusTxt, xhr){
