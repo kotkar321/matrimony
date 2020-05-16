@@ -1,12 +1,17 @@
 $(document).ready(function(){
 	
+	$(function(){
+		var includes = $('[data-include]');
+		var limit = 10005;
+		jQuery.each(includes, function(){
+		  for (i = 10001; i < limit; i++) {
+			var file =  i + '.html';
+			$(this).load(file);
+		}
+		});
+	});
 	
 	
-	var limit = 10005;
-	for (i = 10001; i < limit; i++) {
-	 	var file =  i + '.html';
-	      	$(this).load(file);
-	}
 	$(".custom-control-input").click(function(){
 		$(".all").show();
 		if ($('#checkKashayp').is(":checked") || $('#checkKhalap').is(":checked") || $('#checkMandav').is(":checked") || $('#checkGahilam').is(":checked") || $('#checkGautam').is(":checked") || $('#checkLokaksha').is(":checked")) {
