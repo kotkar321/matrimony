@@ -2,8 +2,8 @@ $(document).ready(function(){
 	
 	
 	
-	var = 3;
-	for (i = 0; i < cars.length; i++) {
+	var limit = 10005;
+	for (i = 10001; i < limit; i++) {
 	 	var file =  i + '.html';
 	      	$(this).load(file);
 	}
