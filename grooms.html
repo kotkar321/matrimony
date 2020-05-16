@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -17,7 +16,34 @@
 </head>
 <body>
 	<div class="container">
-		<div id="header"><div>
+		<!-- Header -->
+		<header class="blog-header py-3">
+			<div
+				class="row flex-nowrap justify-content-between align-items-center">
+				<div class="col-3 pt-1">
+					<a class="text-muted" href="#">Subscribe</a>
+				</div>
+				<div class="col-6 text-center">
+					<a class="blog-header-logo text-dark" href="#">Website Name</a>
+				</div>
+				<div class="col-3 d-flex justify-content-end align-items-center">
+					<a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+				</div>
+			</div>
+		</header>
+
+		<!-- Navigation Bar -->
+		<div class="nav-scroller py-1 mb-2">
+			<nav class="nav d-flex justify-content-between">
+				<a class="p-2 text-muted" href="index.html"> Home </a> 
+				<a class="p-2 text-muted" href="grooms.html"> Groom </a> 
+				<a class="p-2 text-muted" href="bride.html"> Bride </a> 
+				<a class="p-2 text-muted" href="#"> Samaj </a>
+				<a class="p-2 text-muted" href="#"> News </a> 
+				<a class="p-2 text-muted" href="#"> Contacts </a>
+				<a class="p-2 text-muted" href="#"> Help </a>
+			</nav>
+		</div>
 
 		<!-- Information Bar -->
 		<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
@@ -26,33 +52,134 @@
 				<p class="lead my-3">Multiple lines of text that form the lede.</p>
 				<p class="lead mb-0">
 					<a href="#" class="text-white font-weight-bold">Continue
-						reading........</a>
+						reading...</a>
 				</p>
 			</div>
 		</div>
 
-		<div id="filter"><div>
+		<!-- Filter -->
+		<p>
+			<a class="btn btn-light card" data-toggle="collapse"
+				href="#collapseExample" role="button" aria-expanded="false"
+				aria-controls="collapseExample"> Filter </a>
+		</p>
+		<div class=" collapse" id="collapseExample">
+			<div class="card">
+				<div class="card-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm">
+								<h4>Gotra (गोत्र)</h4>
+							</div>
+							<div class="col-sm">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="checkKashayp" > <label
+										class="custom-control-label" for="checkKashayp">Kashayp</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="checkKhalap" > <label
+										class="custom-control-label" for="checkKhalap">Khalap</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="checkMandav" > <label
+										class="custom-control-label" for="checkMandav">Mandav</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="checkGahilam" > <label
+										class="custom-control-label" for="checkGahilam">Gahilam</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="checkGautam" > <label
+										class="custom-control-label" for="checkGautam">Gautam</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="checkLokaksha" > <label
+										class="custom-control-label" for="checkLokaksha">Lokaksha</label>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm">
+								<h4>Work City</h4>
+							</div>
+							<div class="col-sm">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="checkPune" > <label
+										class="custom-control-label" for="checkPune">Pune</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="checkMumbai" > <label
+										class="custom-control-label" for="checkMumbai">Mumbai</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="chceckNagpur" > <label
+										class="custom-control-label" for="chceckNagpur">Nagpur</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="checkNasik" > <label
+										class="custom-control-label" for="checkNasik">Nasik</label>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm">
+								<h4>Occupation</h4>
+							</div>
+							<div class="col-sm">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="checkDoctor" > <label
+										class="custom-control-label" for="checkDoctor">Doctor</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="checkEngineer" > <label
+										class="custom-control-label" for="checkEngineer">Engineer</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="checkCA" > <label
+										class="custom-control-label" for="checkCA">CA</label>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<br>
-			
-		<!-- Grooms Data -->
-		<div class="row mb-2" id="profiles"></div>
 		
 	</div>
 
 
 	<!-- Footer -->
 	<footer class="blog-footer">
-		<div id="footer"><div>
+		<p>
+			Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a>
+			by <a href="https://twitter.com/mdo">@mdo</a>.
+		</p>
 	</footer>
 
-	<!-- Bootstrap core JavaScript -->
+	<!-- Bootstrap core JavaScript
+		================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="MyFilter.js"></script>
-	
 </body>
 </html>
-
-
