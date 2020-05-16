@@ -8,7 +8,8 @@ $(document).ready(function(){
 		jQuery.each(includes, function(){
 		  for (i = 10001; i < limit; i++) {
 			var file =  i + '.html';
-			$(this).load(file);
+			var data = $(this).load(file);
+			alert(data);
 		}
 		});
 	});
