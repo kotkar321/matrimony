@@ -1,9 +1,9 @@
 $(document).ready(function(){
 	
 	
-	$("#header").load("Header");
-	$("#filter").load("Filter");
-	$("#footer").load("Footer");
+	$("#header").load("Header.html");
+	$("#filter").load("Filter.html");
+	$("#footer").load("Footer.html");
 	
 	$(".custom-control-input").click(function(){
 		$(".all").show();
