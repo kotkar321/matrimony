@@ -1,8 +1,10 @@
 $(document).ready(function(){
 	
-	$("#header").load("Header.html");
-	$("#filter").load("Filter.html");
-	$("#footer").load("Footer.html");
+
+  	$("#loadAllGrooms").click(function(){
+    		$("Profiles").load("Profiles_Groom"))
+  	});
+
 	
 	$(".custom-control-input").click(function(){
 		$(".all").show();
