@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	
-	
 	$("#header").load("Header.html");
 	$("#filter").load("Filter.html");
 	$("#footer").load("Footer.html");
