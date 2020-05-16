@@ -1,11 +1,12 @@
 $(document).ready(function(){
 	
-	var includes = $('[data-include]');
-	    jQuery.each(includes, function(){
-	      var file =  $(this).data('include') + '.html';
-	      $(this).load(file);
-	    });
 	
+	
+	var = 3;
+	for (i = 0; i < cars.length; i++) {
+	 	var file =  i + '.html';
+	      	$(this).load(file);
+	}
 	$(".custom-control-input").click(function(){
 		$(".all").show();
 		if ($('#checkKashayp').is(":checked") || $('#checkKhalap').is(":checked") || $('#checkMandav').is(":checked") || $('#checkGahilam').is(":checked") || $('#checkGautam').is(":checked") || $('#checkLokaksha').is(":checked")) {
