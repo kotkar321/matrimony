@@ -2,9 +2,15 @@ $(document).ready(function(){
 	
 
   	$("#loadAllGrooms").click(function(){
-    		$("Profiles").load("Profiles_Groom"))
+    		$("#Profiles").load("Profiles_Groom.html", function(responseTxt, statusTxt, xhr){
+      		if(statusTxt == "success")
+        		alert("External content loaded successfully!");
+      		if(statusTxt == "error")
+        		alert("Error: " + xhr.status + ": " + xhr.statusText);
+    		});
   	});
 
+	
 	
 	$(".custom-control-input").click(function(){
 		$(".all").show();
