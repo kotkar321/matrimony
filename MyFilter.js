@@ -36,7 +36,7 @@ $(document).ready(function(){
 			console.log('all gotra false');
 		}
 		
-		if ($('#checkPune').is(":checked") || $('#checkMumbai').is(":checked") || $('#chceckNagpur').is(":checked") || $('#checkNasik').is(":checked") || $('#checkNasik').is(":checked")) {
+		if ($('#checkPune').is(":checked") || $('#checkMumbai').is(":checked") || $('#chceckNagpur').is(":checked") || $('#checkNasik').is(":checked") || $('#checkAurangabad').is(":checked") || $('#checkDhule').is(":checked") || $('#checkJalgaon').is(":checked") || $('#checkNandurbar').is(":checked") || $('#checkSurat').is(":checked") || $('#checkForeignCountry').is(":checked") || $('#checkOther').is(":checked")) {
 			if ($('#checkPune').is(":checked")) 
 				console.log('your message');
 			else
@@ -57,6 +57,41 @@ $(document).ready(function(){
 			else			
 				$(".Nasik").hide();
 			
+			if ($('#checkAurangabad').is(":checked"))
+				console.log('your message');
+			else			
+				$(".Aurangabad").hide();
+				
+			if ($('#checkDhule').is(":checked"))
+				console.log('your message');
+			else			
+				$(".Dhule").hide();
+
+			if ($('#checkJalgaon').is(":checked"))
+				console.log('your message');
+			else			
+				$(".Jalgaon").hide();
+
+			if ($('#checkNandurbar').is(":checked"))
+				console.log('your message');
+			else			
+				$(".Nandurbar").hide();	
+			
+			if ($('#checkSurat').is(":checked"))
+				console.log('your message');
+			else			
+				$(".Surat").hide();
+				
+			if ($('#checkForeignCountry').is(":checked"))
+				console.log('your message');
+			else			
+				$(".ForeignCountry").hide();
+				
+			if ($('#checkOther').is(":checked"))
+				console.log('your message');
+			else			
+				$(".Other").hide();	
+				
 		} else {
 			console.log('all City false');
 		}
