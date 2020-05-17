@@ -36,26 +36,22 @@ $(document).ready(function(){
 			console.log('all gotra false');
 		}
 		
-		if ($('#checkPune').is(":checked") || $('#checkMumbai').is(":checked") || $('#chceckNagpur').is(":checked") || $('#checkNasik').is(":checked")) {
-			//pune
+		if ($('#checkPune').is(":checked") || $('#checkMumbai').is(":checked") || $('#chceckNagpur').is(":checked") || $('#checkNasik').is(":checked") || $('#checkNasik').is(":checked")) {
 			if ($('#checkPune').is(":checked")) 
 				console.log('your message');
 			else
 				$(".Pune").hide();
 								
-			//Mumbai
 			if ($('#checkMumbai').is(":checked")) 
 				console.log('your message');
 			else
 				$(".Mumbai").hide();
 			
-			//Nagpur
 			if ($('#checkNagpur').is(":checked")) 
 				console.log('your message');
 			else
 				$(".Nagpur").hide();
 			
-			//Nasik
 			if ($('#checkNasik').is(":checked"))
 				console.log('your message');
 			else			
@@ -65,24 +61,71 @@ $(document).ready(function(){
 			console.log('all City false');
 		}
 		
-		if ($('#checkDoctor').is(":checked") || $('#checkEngineer').is(":checked") || $('#checkCA').is(":checked")) {
-			//pune
+		if ($('#checkDoctor').is(":checked") || $('#checkEngineer').is(":checked") || $('#checkCA').is(":checked") || $('#checkBusinessman').is(":checked") || $('#checkEnterpreneur').is(":checked") || $('#checkBuilder').is(":checked") || $('#checkTeacher').is(":checked") || $('#checkFarmar').is(":checked") || $('#checkBankManager').is(":checked") || $('#checkPharmacist').is(":checked") || $('#checkMR').is(":checked") || $('#checkInsuranceAdvisor').is(":checked") || $('#checkOther').is(":checked")) {
 			if ($('#checkDoctor').is(":checked")) 
 				console.log('your message');
 			else
 				$(".Doctor").hide();
 								
-			//Mumbai
 			if ($('#checkEngineer').is(":checked")) 
 				console.log('your message');
 			else
 				$(".Engineer").hide();
 			
-			//Nagpur
 			if ($('#checkCA').is(":checked")) 
 				console.log('your message');	
 			else
 				$(".CA").hide();
+				
+			if ($('#checkBusinessman').is(":checked")) 
+				console.log('your message');	
+			else
+				$(".Businessman").hide();
+
+			if ($('#checkEnterpreneur').is(":checked")) 
+				console.log('your message');	
+			else
+				$(".Enterpreneur").hide();
+				
+			if ($('#checkBuilder').is(":checked")) 
+				console.log('your message');	
+			else
+				$(".Builder").hide();
+
+			if ($('#checkTeacher').is(":checked")) 
+				console.log('your message');	
+			else
+				$(".Teacher").hide();
+				
+			if ($('#checkFarmar').is(":checked")) 
+				console.log('your message');	
+			else
+				$(".Farmar").hide();
+
+			if ($('#checkBankManager').is(":checked")) 
+				console.log('your message');	
+			else
+				$(".BankManager").hide();
+
+			if ($('#checkPharmacist').is(":checked")) 
+				console.log('your message');	
+			else
+				$(".Pharmacist").hide();
+
+			if ($('#checkMR').is(":checked")) 
+				console.log('your message');	
+			else
+				$(".MR").hide();
+
+			if ($('#checkInsuranceAdvisor').is(":checked")) 
+				console.log('your message');	
+			else
+				$(".InsuranceAdvisor").hide();	
+				
+			if ($('#checkOther').is(":checked")) 
+				console.log('your message');	
+			else
+				$(".Other").hide();	
 		} else {
 			console.log('all occupation false');
 		}
