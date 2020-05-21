@@ -15,12 +15,9 @@
 				    $.each(results, function(index, element){
 					    console.log(element);
 					    var values = element.split("=");
-					    if(values[0] === undefined) {
-						    
-					    }else if(values[0] == "siteName") {
-						    $("#siteName").val(values[1]);
-					    } else {
-					    }
+					    if(values[0] === undefined || values[0] == "") {
+					    }						    
+					    document.getElementById(values[0]).innerHTML = values[1];
 				    });
 			    }
 			  };
