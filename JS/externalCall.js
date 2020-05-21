@@ -25,7 +25,7 @@
 				    });
 			    }
 			  };
-			  xhttp.open("GET", "PageInfo/" + fileName + ".csv", true);
+			  xhttp.open("GET", "PageInfo/" + fileName + ".properties", true);
 			  xhttp.send();
 			}
 
