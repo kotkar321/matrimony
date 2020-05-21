@@ -7,7 +7,7 @@ $(document).ready(function(){
 			  return str.replace(new RegExp(escapeRegExp(term), 'g'), replacement);
 			}
 	
-			function replaceAll(type) {
+			function loadProfiles(type) {
 			  var xhttp = new XMLHttpRequest();
 			  xhttp.onreadystatechange = function() {
 			    if (this.readyState == 4 && this.status == 200) {
