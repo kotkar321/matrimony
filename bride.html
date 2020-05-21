@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-                <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="0" />
+                <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="0" /> 
 		<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1,  shrink-to-fit=no"><meta name="author" content=""><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">		<!-- Custom styles for this template -->		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">		<link href="blog.css" rel="stylesheet">
-		<title>PavitraNaati | Bride </title>
+		<title>PavitraNaati | Groom </title>
 	</head>
 	<body>
 		<div class="container">
@@ -11,23 +11,37 @@
 			<header class="blog-header py-3">
 				<div class="row flex-nowrap justify-content-between align-items-center">
 					<div class="col-9"><a class="blog-header-logo text-dark" href="index.html"><p id="siteName">PavitraNaati</p></a></div>
-					<div class="col-3 d-flex justify-content-end align-items-center"><a class="btn btn-sm btn-outline-secondary" href="bride_mr.html">Marathi</a> &nbsp;&nbsp; <a class="btn btn-sm btn-outline-secondary" href="https://forms.gle/Jq66VexSiM68A88u8"> Register </a></div>
+					<div class="col-3 d-flex justify-content-end align-items-center">
+						<a class="btn btn-sm btn-outline-secondary" href="groom_mr.html" id="TranslateTo">Marathi</a> &nbsp;&nbsp; 
+						<a class="btn btn-sm btn-outline-secondary" href="https://forms.gle/Jq66VexSiM68A88u8" id="Register"> Register </a>
+					</div>
 				</div>
 			</header>
 
 			<!-- Navigation Bar -->
-			<div class="nav-scroller py-1 mb-2">			
-				<a class="p-2 text-muted" id="Link1" href="index.html"></a><a class="p-2 text-muted" id="Link2" href=""></a><a class="p-2 text-muted" id="Link3" href=""></a><a class="p-2 text-muted" id="Link4" href=""></a><a class="p-2 text-muted" id="Link5" href=""></a><a class="p-2 text-muted" id="Link6" href=""></a><a class="p-2 text-muted" id="Link7" href=""></a>
+			<div class="nav-scroller py-1 mb-2">
+				<nav class="nav d-flex justify-content-between"> 
+					<a class="p-2 text-muted" id="Link1" href="index.html">Home</a>
+					<a class="p-2 text-muted" id="Link2" href="">Home</a>
+					<a class="p-2 text-muted" id="Link3" href="">Home</a>
+					<a class="p-2 text-muted" id="Link4" href="">Home</a>
+					<a class="p-2 text-muted" id="Link5" href="">Home</a>
+					<a class="p-2 text-muted" id="Link6" href="">Home</a>
+					<a class="p-2 text-muted" id="Link7" href="">Home</a>
+				</nav>	
 			</div>
 
 			<!-- Information Bar -->
 			<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
-				<div class="col-md-6 px-0"><h1 class="display-4 font--weight-bold">Groom Bio-Data</h1><br><p class="lead my-3-italic">Chala Julooya Pavitra Nati...</p>				<!--<p class="lead mb-0">					<a href="#" class="text-white font-weight-bold">Continue reading...</a>				</p>-->			</div>
+				<div class="col-md-6 px-0">
+					<h1 class="display-4 font--weight-bold" id="Line1"></h1><br>
+					<p class="lead my-3-italic" id="Line2"></p>
+				</div>
 			</div>
 
 			<!-- Filter -->
 			<p>
-				<a class="btn btn-light card" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> Filter </a>
+				<a id="filterButton" class="btn btn-light card" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"> Filter </a>
 			</p>
 
 			<!-- Filter Data -->
@@ -38,8 +52,9 @@
 			<!-- Line Break -->
 			<br>
 
-			<!-- Bride Data -->
+			<!-- Grooms Data -->
 			<div class="row mb-2" id="profiles">
+				
 			</div>
 			
 			<!-- No More Result -->
@@ -48,7 +63,10 @@
 
 		<!-- Footer -->
 		<footer class="blog-footer">
-			<p> Email <a href="Pavitranaati@gmail.com">PavitraNaati@gmail.com</a> Contact +91 9000000001 </p>
+			<p> 
+				<div id="emailId"></div>
+				<div id="mobileNo"></div>
+			</p>
 		</footer>
 
 		<!-- Bootstrap core JavaScript-->
@@ -60,9 +78,10 @@
 		<script src="JS/externalCall.js"></script>
 		<script>
 			$(document).ready(function(){
-				loadProfiles("Bride");
-				loadSiteInfo("CommonInfo_mr");
+				loadSiteInfo("CommonInfo_en","Bride");
 			});
 		</script>
+		
+		
 	</body>
 </html>
