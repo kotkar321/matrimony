@@ -6,7 +6,7 @@
 			  return str.replace(new RegExp(escapeRegExp(term), 'g'), replacement);
 			}
 	
-			function loadSiteInfo(fileName) {
+			function loadSiteInfo(fileName1, fileName2) {
 			  var xhttp = new XMLHttpRequest();
 			  xhttp.onreadystatechange = function() {
 			    if (this.readyState == 4 && this.status == 200) {
@@ -27,8 +27,10 @@
 				    });
 			    }
 			  };
-			  xhttp.open("GET", "PageInfo/" + fileName + ".properties", true);
+			  xhttp.open("GET", "PageInfo/" + fileName1 + ".properties", true);
 			  xhttp.send();
+			
+			  loadProfiles(fileName2);
 			}
 
 
