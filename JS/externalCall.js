@@ -12,7 +12,6 @@
 			    if (this.readyState == 4 && this.status == 200) {
 				    var csvdata = this.responseText;
 				    var results = csvdata.split("\n");
-				   
 				    $.each(results, function(index, element){
 					    console.log(element);
 					    var values = element.split("=");
