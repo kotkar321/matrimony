@@ -1,4 +1,4 @@
-      function escapeRegExp(string){
+      			function escapeRegExp(string){
 			    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 			}
 
