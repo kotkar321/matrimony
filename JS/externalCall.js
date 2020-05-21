@@ -16,9 +16,13 @@
 					    console.log(element);
 					    var values = element.split("=");
 					    if(values[0] === undefined || values[0] == "") {
-					    } else {						    
+						    
+					    } else if(values[2] === undefined || values[2] == "") {						    
 					    	document.getElementById(values[0]).innerHTML = values[1];
+					    } else {						    
+					    	document.getElementById(values[0]).href=values[2]; 
 					    }
+					    
 				    });
 			    }
 			  };
