@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 			function escapeRegExp(string){
 			    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 			}
@@ -200,4 +200,3 @@ $(document).ready(function(){
 		}
 		
 	});
-});
