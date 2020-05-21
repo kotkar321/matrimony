@@ -25,7 +25,7 @@
 				    });
 			    }
 			  };
-			  xhttp.open("GET", "CSV/" + fileName + ".csv", true);
+			  xhttp.open("GET", "PageInfo/" + fileName + ".csv", true);
 			  xhttp.send();
 			}
 
@@ -59,7 +59,7 @@
 				    document.getElementById("profiles").innerHTML = finalDataString;
 			    }
 			  };
-			  xhttp.open("GET", fileName + ".csv", true);
+			  xhttp.open("GET", "CSV/"fileName + ".csv", true);
 			  xhttp.send();
 			}
 
