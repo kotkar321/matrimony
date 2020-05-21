@@ -37,7 +37,7 @@
 				    document.getElementById("profiles").innerHTML = finalDataString;
 			    }
 			  };
-			  xhttp.open("GET", fileName + ".csv", true);
+			  xhttp.open("GET", "CSV/" + fileName + ".csv", true);
 			  xhttp.send();
 			}
 
