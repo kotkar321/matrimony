@@ -57,6 +57,11 @@
 				    myStr = replaceAll(myStr, 'CITY', 'Pune');
 				    myStr = replaceAll(myStr, 'OCCUPATION', 'Engineer');
 				    myStr = replaceAll(myStr, 'NAME', 'Harish KO');
+				    var csvdata = this.responseText;
+				    var results = csvdata.split("\n");
+				    $.each(results, function(index, element){
+					    console.log(element);
+				    });
 				    //document.getElementById("demo").innerHTML = this.responseText;
 				    document.getElementById("profiles").innerHTML = myStr;
 			    }
