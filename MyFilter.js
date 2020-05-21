@@ -6,7 +6,8 @@ $(document).ready(function(){
 			function replaceAll(str, term, replacement) {
 			  return str.replace(new RegExp(escapeRegExp(term), 'g'), replacement);
 			}
-			
+	
+			function replaceAll(type) {
 			  var xhttp = new XMLHttpRequest();
 			  xhttp.onreadystatechange = function() {
 			    if (this.readyState == 4 && this.status == 200) {
@@ -30,9 +31,9 @@ $(document).ready(function(){
 				    document.getElementById("profiles").innerHTML = finalDataString;
 			    }
 			  };
-			  xhttp.open("GET", "1.csv", true);
+			  xhttp.open("GET", type, true);
 			  xhttp.send();
-	
+			}
 	$(".custom-control-input").click(function(){
 		$(".all").show();
 		if ($('#checkKashayp').is(":checked") || $('#checkKhalap').is(":checked") || $('#checkMandav').is(":checked") || $('#checkGahilam').is(":checked") || $('#checkGautam').is(":checked") || $('#checkLokaksha').is(":checked")) {
