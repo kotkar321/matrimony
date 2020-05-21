@@ -13,7 +13,7 @@
 				    var csvdata = this.responseText;
 				    var results = csvdata.split("\n");
 				    $.each(results, function(index, element){
-					    console.log(element);
+					    console.log("Property :" + element);
 					    var values = element.split("=");
 					    if(values[0] === undefined || values[0] == "") {
 						    
@@ -42,7 +42,7 @@
 				    var results = csvdata.split("\n");
 				    var finalDataString = "";
 				    $.each(results, function(index, element){
-					    console.log(element);
+					    console.log("Profile :" + element);
 					    var values = element.split(",");
 					    if(values[1] === undefined || values[1] == 'Name') {
 						    
