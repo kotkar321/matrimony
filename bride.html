@@ -35,12 +35,8 @@
 			<!-- Line Break -->
 			<br>
 
-			<!-- Grooms Data -->
-			<div class="row mb-2" >
-				<div class='col-md-4 Dhule Mandav Teacher all'><div class='row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'><div class='col p-4 d-flex flex-column position-static'><strong class='d-inline-block mb-2 text-success'>Bride</strong><h3 class='mb-0'>DipikaNerkar</h3><div class='mb-1 text-muted'>May 7, 2020</div><div class='mb-1'>Gotra : <b><i>Mandav</i></b> </div><div class='mb-1'>Occupation : <b><i>Teacher</i></b></div><div class='mb-1'>Work City : <b><i>Dhule </i></b></div><a href='{{URL}}' class='stretched-link'>Download Bio Data</a></div></div></div>
-				<div class='col-md-4 Dhule Mandav Teacher all'><div class='row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'><div class='col p-4 d-flex flex-column position-static'><strong class='d-inline-block mb-2 text-success'>Bride</strong><h3 class='mb-0'>DipikaNerkar</h3><div class='mb-1 text-muted'>May 7, 2020</div><div class='mb-1'>Gotra : <b><i>Mandav</i></b> </div><div class='mb-1'>Occupation : <b><i>Teacher</i></b></div><div class='mb-1'>Work City : <b><i>Dhule </i></b></div><a href='{{URL}}' class='stretched-link'>Download Bio Data</a></div></div></div>
-				<div class='col-md-4 Dhule Mandav Teacher all'><div class='row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'><div class='col p-4 d-flex flex-column position-static'><strong class='d-inline-block mb-2 text-success'>Bride</strong><h3 class='mb-0'>DipikaNerkar</h3><div class='mb-1 text-muted'>May 7, 2020</div><div class='mb-1'>Gotra : <b><i>Mandav</i></b> </div><div class='mb-1'>Occupation : <b><i>Teacher</i></b></div><div class='mb-1'>Work City : <b><i>Dhule </i></b></div><a href='{{URL}}' class='stretched-link'>Download Bio Data</a></div></div></div>
-				<div class='col-md-4 Dhule Mandav Teacher all'><div class='row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'><div class='col p-4 d-flex flex-column position-static'><strong class='d-inline-block mb-2 text-success'>Bride</strong><h3 class='mb-0'>DipikaNerkar</h3><div class='mb-1 text-muted'>May 7, 2020</div><div class='mb-1'>Gotra : <b><i>Mandav</i></b> </div><div class='mb-1'>Occupation : <b><i>Teacher</i></b></div><div class='mb-1'>Work City : <b><i>Dhule </i></b></div><a href='{{URL}}' class='stretched-link'>Download Bio Data</a></div></div></div>
+			<!-- Bride Data -->
+			<div class="row mb-2" id="profiles">
 			</div>
 			
 			<!-- No More Result -->
@@ -58,5 +54,10 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="MyFilter.js"></script>
+		<script>
+			$(document).ready(function(){
+				loadProfiles("2.csv");
+			});
+		</script>
 	</body>
 </html>
