@@ -43,39 +43,36 @@ $(document).ready(function(){
 		
 		if ($('#cityFilter0').is(":checked") || $('#cityFilter1').is(":checked") || $('#cityFilter2').is(":checked") || $('#cityFilter3').is(":checked") || $('#cityFilter4').is(":checked") || $('#cityFilter5').is(":checked") || $('#cityFilter6').is(":checked") || $('#cityFilter7').is(":checked") || $('#cityFilter8').is(":checked") || $('#cityFilter9').is(":checked") || $('#cityFilter10').is(":checked")) {
 			if ($('#cityFilter0').is(":checked")) {
-				console.log('your message');
-			} else {
 				console.log('-'+$("#cityFilter_0").text()+'-');
+			} else {
 				$("."+$("#cityFilter_0").text()).hide();
 			}			
 			
 			if ($('#cityFilter1').is(":checked")) {
-				console.log('your message');
-			} else {
 				console.log('-'+$("#cityFilter_1").val()+'-');
+			} else {
 				$("."+$("#cityFilter_1").text()).hide();
 			}
 			if ($('#cityFilter2').is(":checked")) {
-				console.log('your message');
-			} else {
 				console.log('-'+$("#cityFilter_2").html()+'-');
+			} else {
 				$("."+$("#cityFilter_2").text()).hide();
 			}
 			
 			if ($('#cityFilter3').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#cityFilter_3").html()+'-');
 			} else {
 				$("."+$("#cityFilter_3").text()).hide();
 			}
 			
 			if ($('#cityFilter4').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#cityFilter_4").html()+'-');
 			} else {
 				$("."+$("#cityFilter_4").text()).hide();
 			}
 			
 			if ($('#cityFilter5').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#cityFilter_5").html()+'-');
 			} else {
 				$("."+$("#cityFilter_5").text()).hide();
 			}
