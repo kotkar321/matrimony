@@ -133,7 +133,7 @@
 				    });
 			    }
 			  };
-			  xhttp.open("GET", "CSV/Filters_" + language + ".csv?t="+ Math.random(), false);
+			  xhttp.open("GET", "CSV/filters_" + language + ".csv?t="+ Math.random(), false);
 			  xhttp.send();
 			}
 
