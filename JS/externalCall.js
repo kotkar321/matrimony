@@ -29,8 +29,10 @@
 			  };
 			  xhttp.open("GET", "properties/CommonInfo_" + langFile + ".properties?t="+ Math.random(), true);
 			  xhttp.send();
-			
-			  loadProfiles(typeFile, langFile);
+
+			  if(typeFile != "") {
+			  	loadProfiles(typeFile, langFile);
+			  }	
 			}
 
 
