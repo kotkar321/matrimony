@@ -5,37 +5,37 @@ $(document).ready(function(){
 			if ($('#GotraFilter0').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("GotraFilter_0").text()).hide();
+				$("."+$("#GotraFilter_0").text()).hide();
 			}
 			
 			if ($('#GotraFilter1').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("GotraFilter_1").text()).hide();
+				$("."+$("#GotraFilter_1").text()).hide();
 			}
 			
 			if ($('#GotraFilter2').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("GotraFilter_2").text()).hide();
+				$("."+$("#GotraFilter_2").text()).hide();
 			}
 			
 			if ($('#GotraFilter3').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("GotraFilter_3").text()).hide();
+				$("."+$("#GotraFilter_3").text()).hide();
 			}
 			
 			if ($('#GotraFilter4').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("GotraFilter_4").text()).hide();
+				$("."+$("#GotraFilter_4").text()).hide();
 			}
 			
 			if ($('#GotraFilter5').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("GotraFilter_5").text()).hide();
+				$("."+$("#GotraFilter_5").text()).hide();
 			}
 		} else {
 			console.log('all gotra false');
@@ -45,66 +45,66 @@ $(document).ready(function(){
 			if ($('#cityFilter0').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("cityFilter_0").text()).hide();
+				$("."+$("#cityFilter_0").text()).hide();
 			}			
 			
 			if ($('#cityFilter1').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("cityFilter_1").text()).hide();
+				$("."+$("#cityFilter_1").text()).hide();
 			}
 			if ($('#cityFilter2').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("cityFilter_2").text()).hide();
+				$("."+$("#cityFilter_2").text()).hide();
 			}
 			
 			if ($('#cityFilter3').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("cityFilter_3").text()).hide();
+				$("."+$("#cityFilter_3").text()).hide();
 			}
 			
 			if ($('#cityFilter4').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("cityFilter_4").text()).hide();
+				$("."+$("#cityFilter_4").text()).hide();
 			}
 			
 			if ($('#cityFilter5').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("cityFilter_5").text()).hide();
+				$("."+$("#cityFilter_5").text()).hide();
 			}
 			
 			if ($('#cityFilter6').is(":checked")) {
 				console.log('your message');
 			} else {			
-				$("."+$("cityFilter_6").text()).hide();
+				$("."+$("#cityFilter_6").text()).hide();
 			}
 			
 			if ($('#cityFilter7').is(":checked")) {
 				console.log('your message');
 			} else {			
-				$("."+$("cityFilter_7").text()).hide();
+				$("."+$("#cityFilter_7").text()).hide();
 			}
 			
 			if ($('#cityFilter8').is(":checked")) {
 				console.log('your message');
 			} else {			
-				$("."+$("cityFilter_8").text()).hide();
+				$("."+$("#cityFilter_8").text()).hide();
 			}
 			
 			if ($('#cityFilter9').is(":checked")) {
 				console.log('your message');
 			} else {			
-				$("."+$("cityFilter_9").text()).hide();
+				$("."+$("#cityFilter_9").text()).hide();
 			}
 			
 			if ($('#cityFilter10').is(":checked")) {
 				console.log('your message');
 			} else {			
-				$("."+$("cityFilter_10").text()).hide();
+				$("."+$("#cityFilter_10").text()).hide();
 			}
 			
 		} else {
@@ -115,79 +115,79 @@ $(document).ready(function(){
 			if ($('#occupationFilter0').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("occupationFilter_0").text()).hide();
+				$("."+$("#occupationFilter_0").text()).hide();
 			}
 			
 			if ($('#occupationFilter1').is(":checked")) {
 				console.log('your message');
 			} else {
-				$("."+$("occupationFilter_1").text()).hide();
+				$("."+$("#occupationFilter_1").text()).hide();
 			}
 			
 			if ($('#occupationFilter2').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$("."+$("occupationFilter_2").text()).hide();
+				$("."+$("#occupationFilter_2").text()).hide();
 			}
 			
 			if ($('#occupationFilter3').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$("."+$("occupationFilter_3").text()).hide();
+				$("."+$("#occupationFilter_3").text()).hide();
 			}
 			
 			if ($('#occupationFilter4').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$("."+$("occupationFilter_4").text()).hide();
+				$("."+$("#occupationFilter_4").text()).hide();
 			}
 			
 			if ($('#occupationFilter5').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$("."+$("occupationFilter_5").text()).hide();
+				$("."+$("#occupationFilter_5").text()).hide();
 			}
 			
 			if ($('#occupationFilter6').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$("."+$("occupationFilter_6").text()).hide();
+				$("."+$("#occupationFilter_6").text()).hide();
 			}
 			
 			if ($('#occupationFilter7').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$("."+$("occupationFilter_7").text()).hide();
+				$("."+$("#occupationFilter_7").text()).hide();
 			}
 			
 			if ($('#occupationFilter8').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$("."+$("occupationFilter_8").text()).hide();
+				$("."+$("#occupationFilter_8").text()).hide();
 			}
 			
 			if ($('#occupationFilter9').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$("."+$("occupationFilter_9").text()).hide();
+				$("."+$("#occupationFilter_9").text()).hide();
 			}
 			
 			if ($('#occupationFilter10').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$("."+$("occupationFilter_10").text()).hide();
+				$("."+$("#occupationFilter_10").text()).hide();
 			}
 			
 			if ($('#occupationFilter11').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$("."+$("occupationFilter_11").text()).hide();
+				$("."+$("#occupationFilter_11").text()).hide();
 			}
 			
 			if ($('#occupationFilter12').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$("."+$("occupationFilter_12").text()).hide();
+				$("."+$("#occupationFilter_12").text()).hide();
 			}
 			
 		} else {
