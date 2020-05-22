@@ -80,5 +80,39 @@
 			  };
 			  xhttp.open("GET", "CSV/" + typeFile + "_"+ langFile + ".csv", true);
 			  xhttp.send();
+				
+			  loadFilters(typeFile, langFile);
+			}
+
+			function loadFilters(typeFile, langFile) {
+			  var xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+			    if (this.readyState == 4 && this.status == 200) {
+				    var csvdata = this.responseText;
+				    var results = csvdata.split("\n");
+				    $.each(results, function(index, element){
+					    //console.log("Property :" + element);
+					    var values = element.split("=");
+					    if(values[0] === undefined || values[0] == "") {
+						    
+					    } else if(values[0] == "Gotra") {						    
+						var filters = element.split(",");
+					    	document.getElementById("GotraFilter_"+0).innerHTML = filters[0];
+						document.getElementById("GotraFilter_"+1).innerHTML = filters[1];
+						document.getElementById("GotraFilter_"+2).innerHTML = filters[2];
+						document.getElementById("GotraFilter_"+3).innerHTML = filters[3];
+						document.getElementById("GotraFilter_"+4).innerHTML = filters[4];
+						document.getElementById("GotraFilter_"+5).innerHTML = filters[5];
+						    
+					    } else if(values[0] == "") {						    
+					    	document.getElementById(values[0]).innerHTML = values[1];
+					    } else if(values[0] == "") {						    
+					    	document.getElementById(values[0]).innerHTML = values[1];
+					    } 
+				    });
+			    }
+			  };
+			  xhttp.open("GET", "CSV/Filters_" + langFile + ".csv?t="+ Math.random(), true);
+			  xhttp.send();
 			}
 
