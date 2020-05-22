@@ -65,13 +65,13 @@
 						    myStr = replaceAll(myStr, 'Height', field4);	    
 						    
 						    
-						    if(pageName == "Groom" && language == "en") {
+						    if(pageName == "groom" && language == "en") {
 							myStr = replaceAll(myStr, 'TYPE', "Groom");							    
-						    }else if(pageName == "Groom" && language == "mr") {
+						    }else if(pageName == "groom" && language == "mr") {
 							myStr = replaceAll(myStr, 'TYPE', "वर");							    
-						    } else if(pageName == "Bride" && language == "en") {
+						    } else if(pageName == "bride" && language == "en") {
 							myStr = replaceAll(myStr, 'TYPE', "Bride");							    
-						    } else if(pageName == "Bride" && language == "mr") {
+						    } else if(pageName == "bride" && language == "mr") {
 							myStr = replaceAll(myStr, 'TYPE', "वधू");							    
 						    }
 						    myStr = replaceAll(myStr, 'NAME', values[1]);	    
