@@ -45,17 +45,20 @@ $(document).ready(function(){
 			if ($('#cityFilter0').is(":checked")) {
 				console.log('your message');
 			} else {
+				console.log('-'+$("#cityFilter_0").text()+'-');
 				$("."+$("#cityFilter_0").text()).hide();
 			}			
 			
 			if ($('#cityFilter1').is(":checked")) {
 				console.log('your message');
 			} else {
+				console.log('-'+$("#cityFilter_1").val()+'-');
 				$("."+$("#cityFilter_1").text()).hide();
 			}
 			if ($('#cityFilter2').is(":checked")) {
 				console.log('your message');
 			} else {
+				console.log('-'+$("#cityFilter_2").html()+'-');
 				$("."+$("#cityFilter_2").text()).hide();
 			}
 			
