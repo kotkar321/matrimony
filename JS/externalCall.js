@@ -97,17 +97,25 @@
 						    
 					    } else if(values[0] == "Gotra") {						    
 						var filters = element.split(",");
-					    	document.getElementById("GotraFilter_"+0).innerHTML = filters[0];
-						document.getElementById("GotraFilter_"+1).innerHTML = filters[1];
-						document.getElementById("GotraFilter_"+2).innerHTML = filters[2];
-						document.getElementById("GotraFilter_"+3).innerHTML = filters[3];
-						document.getElementById("GotraFilter_"+4).innerHTML = filters[4];
-						document.getElementById("GotraFilter_"+5).innerHTML = filters[5];
-						    
-					    } else if(values[0] == "") {						    
-					    	document.getElementById(values[0]).innerHTML = values[1];
-					    } else if(values[0] == "") {						    
-					    	document.getElementById(values[0]).innerHTML = values[1];
+						$.each(filters, function(count, dataValue){
+							if(dataValue !== undefined || dataValue != "") {    
+								document.getElementById("GotraFilter_"+count).innerHTML = dataValue;
+							}
+						}
+					    } else if(values[0] == "Work City") {						    
+					    	var filters = element.split(",");
+						$.each(filters, function(count, dataValue){
+							if(dataValue !== undefined || dataValue != "") {    
+								document.getElementById("cityFilter_"+count).innerHTML = dataValue;
+							}
+						}
+					    } else if(values[0] == "Occupation") {						    
+					    	var filters = element.split(",");
+						$.each(filters, function(count, dataValue){
+							if(dataValue !== undefined || dataValue != "") {    
+								document.getElementById("occupationFilter_"+count).innerHTML = dataValue;
+							}
+						}
 					    } 
 				    });
 			    }
