@@ -52,7 +52,7 @@
 					    
 					    if(values[1] === undefined) {
 						    
-					    } else if( values[1] == 'Name') {
+					    } else if( values[0] == 'Id') {
 					    	    var field1 = values[3];
 						    var field2 = values[4];
 						    var field3 = values[5];
