@@ -27,7 +27,7 @@
 				    });
 			    }
 			  };
-			  xhttp.open("GET", "PageInfo/CommonInfo_" + langFile + ".properties?t="+ Math.random(), true);
+			  xhttp.open("GET", "properties/CommonInfo_" + langFile + ".properties?t="+ Math.random(), true);
 			  xhttp.send();
 			
 			  loadProfiles(typeFile, langFile);
