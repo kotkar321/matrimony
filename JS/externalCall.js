@@ -61,8 +61,8 @@
 					    } else {
 						    myStr = replaceAll(myStr, 'Gotra', field1);	    
 						    myStr = replaceAll(myStr, 'Occupation', field2);	    
-						    myStr = replaceAll(myStr, 'TYPE', field3);	    
-						    myStr = replaceAll(myStr, 'Work City', field4);	    
+						    myStr = replaceAll(myStr, 'Work City', field3);	    
+						    myStr = replaceAll(myStr, 'Height', field4);	    
 						    
 						    myStr = replaceAll(myStr, 'TYPE', typeFile);	    
 						    myStr = replaceAll(myStr, 'NAME', values[1]);	    
