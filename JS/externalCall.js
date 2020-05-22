@@ -29,10 +29,6 @@
 			  };
 			  xhttp.open("GET", "properties/CommonInfo_" + langFile + ".properties?t="+ Math.random(), true);
 			  xhttp.send();
-
-			  if(typeFile != "") {
-			  	loadProfiles(typeFile, langFile);
-			  }	
 			}
 
 
@@ -91,9 +87,6 @@
 			  };
 			  xhttp.open("GET", "CSV/" + typeFile + "_"+ langFile + ".csv", true);
 			  xhttp.send();
-			  if(typeFile != "") {
-			  	loadFilters(typeFile, langFile);
-			  }
 			}
 
 			function loadFilters(typeFile, langFile) {
