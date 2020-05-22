@@ -41,15 +41,15 @@
 				    var csvdata = this.responseText;
 				    var results = csvdata.split("\n");
 				    var finalDataString = "";
+				    var field1 = "";
+				    var field2 = "";
+				    var field3 = "";
+				    var field4 = "";
 				    $.each(results, function(index, element){
 					    console.log("Profile :" + element);
 					    var values = element.split(",");
 					    var myStr = "<div class='col-md-4 GOTRA OCCUPATION CITY all'><div class='row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'><div class='col p-4 d-flex flex-column position-static'><strong class='d-inline-block text-success'>TYPE</strong><h3 class='mb-0'>NAME</h3><div class='mb-1 text-muted'>BIRTHDATE</div><div class=''>Height : <b><i>HEIGHT</i></b> </div><div class=''>Gotra : <b><i>GOTRA</i></b> </div><div class=''>Occupation : <b><i>OCCUPATION</i></b></div><div class=''>Work City : <b><i>CITY </i></b></div><a href='URL' class='stretched-link'>Download Bio Data</a></div></div></div>";
-					    var field1 = "";
-					    var field2 = "";
-					    var field3 = "";
-					    var field4 = "";
-					    
+					
 					    if(values[1] === undefined) {
 						    
 					    } else if( values[0] == 'Id') {
