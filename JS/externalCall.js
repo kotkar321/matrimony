@@ -45,6 +45,7 @@
 				    var field2 = "";
 				    var field3 = "";
 				    var field4 = "";
+				    
 				    $.each(results, function(index, element){
 					    console.log("Profile :" + element);
 					    var values = element.split(",");
