@@ -64,11 +64,14 @@
 						    myStr = replaceAll(myStr, 'Work City', field3);	    
 						    myStr = replaceAll(myStr, 'Height', field4);	    
 						    
-						    myStr = replaceAll(myStr, 'TYPE', typeFile);
-						    if(typeFile == "Groom" && langFile == "mr") {
+						    
+						    if(typeFile == "Groom" && langFile == "en") {
+							myStr = replaceAll(myStr, 'TYPE', "Groom");							    
+						    }else if(typeFile == "Groom" && langFile == "mr") {
 							myStr = replaceAll(myStr, 'TYPE', "वर");							    
-						    }
-						    if(typeFile == "Bride" && langFile == "mr") {
+						    } else if(typeFile == "Bride" && langFile == "en") {
+							myStr = replaceAll(myStr, 'TYPE', "Bride");							    
+						    } else if(typeFile == "Bride" && langFile == "mr") {
 							myStr = replaceAll(myStr, 'TYPE', "वधू");							    
 						    }
 						    myStr = replaceAll(myStr, 'NAME', values[1]);	    
