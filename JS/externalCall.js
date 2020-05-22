@@ -6,7 +6,7 @@
 			  return str.replace(new RegExp(escapeRegExp(term), 'g'), replacement);
 			}
 	
-			function loadSiteInfo(fileName1, fileName2) {
+			function loadSiteInfo(typeFile, langFile) {
 			  var xhttp = new XMLHttpRequest();
 			  xhttp.onreadystatechange = function() {
 			    if (this.readyState == 4 && this.status == 200) {
@@ -27,14 +27,14 @@
 				    });
 			    }
 			  };
-			  xhttp.open("GET", "PageInfo/" + fileName1 + ".properties?t="+ Math.random(), true);
+			  xhttp.open("GET", "PageInfo/CommonInfo_" + langFile + ".properties?t="+ Math.random(), true);
 			  xhttp.send();
 			
-			  loadProfiles(fileName2);
+			  loadProfiles(typeFile, langFile);
 			}
 
 
-                        function loadProfiles(fileName) {
+                        function loadProfiles(typeFile, langFile) {
 			  var xhttp = new XMLHttpRequest();
 			  xhttp.onreadystatechange = function() {
 			    if (this.readyState == 4 && this.status == 200) {
@@ -63,7 +63,7 @@
 				    document.getElementById("profiles").innerHTML = finalDataString;
 			    }
 			  };
-			  xhttp.open("GET", "CSV/" + fileName + ".csv", true);
+			  xhttp.open("GET", "CSV/" + typeFile + "_"+ langFile + ".csv", true);
 			  xhttp.send();
 			}
 
