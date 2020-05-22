@@ -74,7 +74,6 @@
 						    finalDataString = finalDataString + myStr;
 					    }
 				    });
-				    //document.getElementById("demo").innerHTML = this.responseText;
 				    document.getElementById("profiles").innerHTML = finalDataString;
 			    }
 			  };
