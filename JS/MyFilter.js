@@ -3,37 +3,37 @@ $(document).ready(function(){
 		$(".all").show();
 		if ($('#GotraFilter0').is(":checked") || $('#GotraFilter1').is(":checked") || $('#GotraFilter2').is(":checked") || $('#GotraFilter3').is(":checked") || $('#GotraFilter4').is(":checked") || $('#GotraFilter5').is(":checked")) {
 			if ($('#GotraFilter0').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#GotraFilter_0").text()+'-');
 			} else {
 				$("."+$("#GotraFilter_0").text()).hide();
 			}
 			
 			if ($('#GotraFilter1').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#GotraFilter_1").text()+'-');
 			} else {
 				$("."+$("#GotraFilter_1").text()).hide();
 			}
 			
 			if ($('#GotraFilter2').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#GotraFilter_2").text()+'-');
 			} else {
 				$("."+$("#GotraFilter_2").text()).hide();
 			}
 			
 			if ($('#GotraFilter3').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#GotraFilter_3").text()+'-');
 			} else {
 				$("."+$("#GotraFilter_3").text()).hide();
 			}
 			
 			if ($('#GotraFilter4').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#GotraFilter_4").text()+'-');
 			} else {
 				$("."+$("#GotraFilter_4").text()).hide();
 			}
 			
 			if ($('#GotraFilter5').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#GotraFilter_5").text()+'-');
 			} else {
 				$("."+$("#GotraFilter_5").text()).hide();
 			}
@@ -78,31 +78,31 @@ $(document).ready(function(){
 			}
 			
 			if ($('#cityFilter6').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#cityFilter_6").html()+'-');
 			} else {			
 				$("."+$("#cityFilter_6").text()).hide();
 			}
 			
 			if ($('#cityFilter7').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#cityFilter_7").html()+'-');
 			} else {			
 				$("."+$("#cityFilter_7").text()).hide();
 			}
 			
 			if ($('#cityFilter8').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#cityFilter_8").html()+'-');
 			} else {			
 				$("."+$("#cityFilter_8").text()).hide();
 			}
 			
 			if ($('#cityFilter9').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#cityFilter_9").html()+'-');
 			} else {			
 				$("."+$("#cityFilter_9").text()).hide();
 			}
 			
 			if ($('#cityFilter10').is(":checked")) {
-				console.log('your message');
+				console.log('-'+$("#cityFilter_10").html()+'-');
 			} else {			
 				$("."+$("#cityFilter_10").text()).hide();
 			}
