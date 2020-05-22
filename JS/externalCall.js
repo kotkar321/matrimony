@@ -96,24 +96,24 @@
 					    var keys = values[0].split(",");
 					    if(values[0] === undefined || values[0] == "") {
 						    
-					    } else if(keys[1] == "Gotra") {						    
-						document.getElementById("gotraFilterText").innerHTML = values[0];
+					    } else if(keys[0] == "1") {						    
+						document.getElementById("gotraFilterText").innerHTML = keys[1];
 						var filters = values[1].split(",");
 						$.each(filters, function(count, dataValue){
 							if(dataValue !== undefined || dataValue != "") {    
 								document.getElementById("GotraFilter_"+count).innerHTML = dataValue;
 							}
 						});
-					    } else if(keys[1] == "Work City") {
-						document.getElementById("cityFilterText").innerHTML = values[0];
+					    } else if(keys[0] == "2") {
+						document.getElementById("cityFilterText").innerHTML = keys[1];
 					    	var filters = values[1].split(",");
 						$.each(filters, function(count, dataValue){
 							if(dataValue !== undefined || dataValue != "") {    
 								document.getElementById("cityFilter_"+count).innerHTML = dataValue;
 							}
 						});
-					    } else if(keys[1] == "Occupation") {	
-						document.getElementById("occupationFilterText").innerHTML = values[0];
+					    } else if(keys[0] == "3") {	
+						document.getElementById("occupationFilterText").innerHTML = keys[1];
 					    	var filters = values[1].split(",");
 						$.each(filters, function(count, dataValue){
 							if(dataValue !== undefined || dataValue != "") {    
