@@ -53,10 +53,10 @@
 					    if(values[1] === undefined) {
 						    
 					    } else if( values[0] == 'Id') {
-					    	    var field1 = values[3];
-						    var field2 = values[4];
-						    var field3 = values[5];
-						    var field4 = values[6];
+					    	    field1 = values[3];
+						    field2 = values[4];
+						    field3 = values[5];
+						    field4 = values[6];
 					    } else {
 						    myStr = replaceAll(myStr, 'Gotra', field1);	    
 						    myStr = replaceAll(myStr, 'Occupation', field2);	    
