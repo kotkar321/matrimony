@@ -89,8 +89,9 @@
 			  };
 			  xhttp.open("GET", "CSV/" + typeFile + "_"+ langFile + ".csv", true);
 			  xhttp.send();
-				
-			  loadFilters(typeFile, langFile);
+			  if(typeFile != "") {
+			  	loadFilters(typeFile, langFile);
+			  }
 			}
 
 			function loadFilters(typeFile, langFile) {
