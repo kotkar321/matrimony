@@ -6,7 +6,7 @@
 			  return str.replace(new RegExp(escapeRegExp(term), 'g'), replacement);
 			}
 	
-			function loadSiteInfo(typeFile, langFile) {
+			function loadSiteInfo(pageName, language) {
 			  var xhttp = new XMLHttpRequest();
 			  xhttp.onreadystatechange = function() {
 			    if (this.readyState == 4 && this.status == 200) {
@@ -27,12 +27,12 @@
 				    });
 			    }
 			  };
-			  xhttp.open("GET", "properties/CommonInfo_" + langFile + ".properties?t="+ Math.random(), true);
+			  xhttp.open("GET", "properties/CommonInfo_" + language + ".properties?t="+ Math.random(), true);
 			  xhttp.send();
 			}
 
 
-                        function loadProfiles(typeFile, langFile) {
+			function loadProfiles(pageName, language) {
 			  var xhttp = new XMLHttpRequest();
 			  xhttp.onreadystatechange = function() {
 			    if (this.readyState == 4 && this.status == 200) {
@@ -63,13 +63,13 @@
 						    myStr = replaceAll(myStr, 'Height', field4);	    
 						    
 						    
-						    if(typeFile == "Groom" && langFile == "en") {
+						    if(pageName == "Groom" && language == "en") {
 							myStr = replaceAll(myStr, 'TYPE', "Groom");							    
-						    }else if(typeFile == "Groom" && langFile == "mr") {
+						    }else if(pageName == "Groom" && language == "mr") {
 							myStr = replaceAll(myStr, 'TYPE', "वर");							    
-						    } else if(typeFile == "Bride" && langFile == "en") {
+						    } else if(pageName == "Bride" && language == "en") {
 							myStr = replaceAll(myStr, 'TYPE', "Bride");							    
-						    } else if(typeFile == "Bride" && langFile == "mr") {
+						    } else if(pageName == "Bride" && language == "mr") {
 							myStr = replaceAll(myStr, 'TYPE', "वधू");							    
 						    }
 						    myStr = replaceAll(myStr, 'NAME', values[1]);	    
@@ -85,11 +85,11 @@
 				    document.getElementById("profiles").innerHTML = finalDataString;
 			    }
 			  };
-			  xhttp.open("GET", "CSV/" + typeFile + "_"+ langFile + ".csv", true);
+			  xhttp.open("GET", "CSV/" + pageName + "_"+ language + ".csv", true);
 			  xhttp.send();
 			}
 
-			function loadFilters(typeFile, langFile) {
+			function loadFilters(pageName, language) {
 			  var xhttp = new XMLHttpRequest();
 			  xhttp.onreadystatechange = function() {
 			    if (this.readyState == 4 && this.status == 200) {
@@ -130,7 +130,7 @@
 				    });
 			    }
 			  };
-			  xhttp.open("GET", "CSV/Filters_" + langFile + ".csv?t="+ Math.random(), true);
+			  xhttp.open("GET", "CSV/Filters_" + language + ".csv?t="+ Math.random(), true);
 			  xhttp.send();
 			}
 
