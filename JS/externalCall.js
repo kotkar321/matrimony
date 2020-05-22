@@ -5,6 +5,28 @@
 			function replaceAll(str, term, replacement) {
 			  return str.replace(new RegExp(escapeRegExp(term), 'g'), replacement);
 			}
+
+			function loadPageInfo(pageName, language) {
+			  console.log("loadPageInfo invoked.");
+			  var xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+			    if (this.readyState == 4 && this.status == 200) {
+				    var csvdata = this.responseText;
+				    var results = csvdata.split("\n");
+				    $.each(results, function(index, element){
+					    console.log("Property :" + element);
+					    var values = element.split("=");
+					    if(values[0] === undefined || values[0] == "") {
+
+					    } else {						    
+						document.getElementById(values[0]).innerHTML = values[1];
+					    } 
+				    });
+			    }
+			  };
+			  xhttp.open("GET", "properties/"+ pageName +"_"+ language + ".properties?t="+ Math.random(), true);
+			  xhttp.send();
+			}
 	
 			function loadSiteInfo(pageName, language) {
 			  console.log("loadSiteInfo invoked.");
