@@ -5,37 +5,37 @@ $(document).ready(function(){
 			if ($('#GotraFilter0').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".GotraFilter0").hide();
+				$("."+$("GotraFilter_0").text()).hide();
 			}
 			
 			if ($('#GotraFilter1').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".GotraFilter1").hide();
+				$("."+$("GotraFilter_1").text()).hide();
 			}
 			
 			if ($('#GotraFilter2').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".GotraFilter2").hide();
+				$("."+$("GotraFilter_2").text()).hide();
 			}
 			
 			if ($('#GotraFilter3').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".GotraFilter3").hide();
+				$("."+$("GotraFilter_3").text()).hide();
 			}
 			
 			if ($('#GotraFilter4').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".GotraFilter4").hide();
+				$("."+$("GotraFilter_4").text()).hide();
 			}
 			
 			if ($('#GotraFilter5').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".GotraFilter5").hide();
+				$("."+$("GotraFilter_5").text()).hide();
 			}
 		} else {
 			console.log('all gotra false');
@@ -45,66 +45,66 @@ $(document).ready(function(){
 			if ($('#cityFilter0').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".cityFilter0").hide();
+				$("."+$("cityFilter_0").text()).hide();
 			}			
 			
 			if ($('#cityFilter1').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".cityFilter1").hide();
+				$("."+$("cityFilter_1").text()).hide();
 			}
 			if ($('#cityFilter2').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".cityFilter2").hide();
+				$("."+$("cityFilter_2").text()).hide();
 			}
 			
 			if ($('#cityFilter3').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".cityFilter3").hide();
+				$("."+$("cityFilter_3").text()).hide();
 			}
 			
 			if ($('#cityFilter4').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".cityFilter4").hide();
+				$("."+$("cityFilter_4").text()).hide();
 			}
 			
 			if ($('#cityFilter5').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".cityFilter5").hide();
+				$("."+$("cityFilter_5").text()).hide();
 			}
 			
 			if ($('#cityFilter6').is(":checked")) {
 				console.log('your message');
 			} else {			
-				$(".cityFilter6").hide();
+				$("."+$("cityFilter_6").text()).hide();
 			}
 			
 			if ($('#cityFilter7').is(":checked")) {
 				console.log('your message');
 			} else {			
-				$(".cityFilter7").hide();	
+				$("."+$("cityFilter_7").text()).hide();
 			}
 			
 			if ($('#cityFilter8').is(":checked")) {
 				console.log('your message');
 			} else {			
-				$(".cityFilter8").hide();
+				$("."+$("cityFilter_8").text()).hide();
 			}
 			
 			if ($('#cityFilter9').is(":checked")) {
 				console.log('your message');
 			} else {			
-				$(".cityFilter9").hide();
+				$("."+$("cityFilter_9").text()).hide();
 			}
 			
 			if ($('#cityFilter10').is(":checked")) {
 				console.log('your message');
 			} else {			
-				$(".cityFilter10").hide();	
+				$("."+$("cityFilter_10").text()).hide();
 			}
 			
 		} else {
@@ -115,79 +115,79 @@ $(document).ready(function(){
 			if ($('#occupationFilter0').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".occupationFilter0").hide();
+				$("."+$("occupationFilter_0").text()).hide();
 			}
 			
 			if ($('#occupationFilter1').is(":checked")) {
 				console.log('your message');
 			} else {
-				$(".occupationFilter1").hide();
+				$("."+$("occupationFilter_1").text()).hide();
 			}
 			
 			if ($('#occupationFilter2').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$(".occupationFilter2").hide();
+				$("."+$("occupationFilter_2").text()).hide();
 			}
 			
 			if ($('#occupationFilter3').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$(".occupationFilter3").hide();
+				$("."+$("occupationFilter_3").text()).hide();
 			}
 			
 			if ($('#occupationFilter4').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$(".occupationFilter4").hide();
+				$("."+$("occupationFilter_4").text()).hide();
 			}
 			
 			if ($('#occupationFilter5').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$(".occupationFilter5").hide();
+				$("."+$("occupationFilter_5").text()).hide();
 			}
 			
 			if ($('#occupationFilter6').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$(".occupationFilter6").hide();
+				$("."+$("occupationFilter_6").text()).hide();
 			}
 			
 			if ($('#occupationFilter7').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$(".occupationFilter7").hide();
+				$("."+$("occupationFilter_7").text()).hide();
 			}
 			
 			if ($('#occupationFilter8').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$(".occupationFilter8").hide();
+				$("."+$("occupationFilter_8").text()).hide();
 			}
 			
 			if ($('#occupationFilter9').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$(".occupationFilter9").hide();
+				$("."+$("occupationFilter_9").text()).hide();
 			}
 			
 			if ($('#occupationFilter10').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$(".occupationFilter10").hide();
+				$("."+$("occupationFilter_10").text()).hide();
 			}
 			
 			if ($('#occupationFilter11').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$(".occupationFilter11").hide();	
+				$("."+$("occupationFilter_11").text()).hide();
 			}
 			
 			if ($('#occupationFilter12').is(":checked")) {
 				console.log('your message');	
 			} else {
-				$(".occupationFilter12").hide();
+				$("."+$("occupationFilter_12").text()).hide();
 			}
 			
 		} else {
