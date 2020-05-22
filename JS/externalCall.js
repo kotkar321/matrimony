@@ -96,21 +96,21 @@
 					    if(values[0] === undefined || values[0] == "") {
 						    
 					    } else if(values[0] == "Gotra") {						    
-						var filters = element.split(",");
+						var filters = values.split(",");
 						$.each(filters, function(count, dataValue){
 							if(dataValue !== undefined || dataValue != "") {    
 								document.getElementById("GotraFilter_"+count).innerHTML = dataValue;
 							}
 						});
 					    } else if(values[0] == "Work City") {						    
-					    	var filters = element.split(",");
+					    	var filters = values.split(",");
 						$.each(filters, function(count, dataValue){
 							if(dataValue !== undefined || dataValue != "") {    
 								document.getElementById("cityFilter_"+count).innerHTML = dataValue;
 							}
 						});
 					    } else if(values[0] == "Occupation") {						    
-					    	var filters = element.split(",");
+					    	var filters = values.split(",");
 						$.each(filters, function(count, dataValue){
 							if(dataValue !== undefined || dataValue != "") {    
 								document.getElementById("occupationFilter_"+count).innerHTML = dataValue;
