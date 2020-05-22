@@ -5,12 +5,16 @@ function loadHomePageDetails(pageName, language) {
 
 function loadGroomPageDetails(pageName, language) {
    loadSiteInfo(pageName, language);
+   loadPageInfo(pageName, language);
+
    loadProfiles(pageName, language);
    loadFilters(pageName, language);
 }
 
 function loadBridePageDetails(pageName, language) {
    loadSiteInfo(pageName, language);
+   loadPageInfo(pageName, language);
+   
    loadProfiles(pageName, language);
    loadFilters(pageName, language);
 }
