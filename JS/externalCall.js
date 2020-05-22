@@ -93,10 +93,11 @@
 				    $.each(results, function(index, element){
 					    console.log("Filters :" + element);
 					    var values = element.split("=");
-					    var keys = values[0].split(",");
 					    if(values[0] === undefined || values[0] == "") {
-						    
-					    } else if(keys[0] == "1") {						    
+						//skip
+					    }
+					    var keys = values[0].split(",");
+					    if(keys[0] == "1") {						    
 						document.getElementById("gotraFilterText").innerHTML = keys[1];
 						var filters = values[1].split(",");
 						$.each(filters, function(count, dataValue){
