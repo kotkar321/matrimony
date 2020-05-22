@@ -13,7 +13,7 @@
 				    var csvdata = this.responseText;
 				    var results = csvdata.split("\n");
 				    $.each(results, function(index, element){
-					    console.log("Property :" + element);
+					    //console.log("Property :" + element);
 					    var values = element.split("=");
 					    if(values[0] === undefined || values[0] == "") {
 						    
