@@ -93,9 +93,10 @@
 				    $.each(results, function(index, element){
 					    console.log("Filters :" + element);
 					    var values = element.split("=");
+					    var keys = values[0].split(",");
 					    if(values[0] === undefined || values[0] == "") {
 						    
-					    } else if(values[0] == "Gotra") {						    
+					    } else if(keys[1] == "Gotra") {						    
 						document.getElementById("gotraFilterText").innerHTML = values[0];
 						var filters = values[1].split(",");
 						$.each(filters, function(count, dataValue){
@@ -103,7 +104,7 @@
 								document.getElementById("GotraFilter_"+count).innerHTML = dataValue;
 							}
 						});
-					    } else if(values[0] == "Work City") {
+					    } else if(keys[1] == "Work City") {
 						document.getElementById("cityFilterText").innerHTML = values[0];
 					    	var filters = values[1].split(",");
 						$.each(filters, function(count, dataValue){
@@ -111,7 +112,7 @@
 								document.getElementById("cityFilter_"+count).innerHTML = dataValue;
 							}
 						});
-					    } else if(values[0] == "Occupation") {	
+					    } else if(keys[1] == "Occupation") {	
 						document.getElementById("occupationFilterText").innerHTML = values[0];
 					    	var filters = values[1].split(",");
 						$.each(filters, function(count, dataValue){
