@@ -27,7 +27,7 @@
 				    });
 			    }
 			  };
-			  xhttp.open("GET", "PageInfo/" + fileName1 + ".properties", true);
+			  xhttp.open("GET", "PageInfo/" + fileName1 + ".properties?t="+ Math.random(), true);
 			  xhttp.send();
 			
 			  loadProfiles(fileName2);
