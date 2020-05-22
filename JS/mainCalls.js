@@ -1,27 +1,28 @@
-function loadHomePageDetails(typeFile, langFile) {
-   
+function loadHomePageDetails(pageName, language) {
+   loadSiteInfo(pageName, language);
 }
 
-function loadGroomPageDetails(typeFile, langFile) {
-   
+function loadGroomPageDetails(pageName, language) {
+   loadSiteInfo(pageName, language);
 }
 
-function loadBridePageDetails(typeFile, langFile) {
-   
+function loadBridePageDetails(pageName, language) {
+   loadSiteInfo(pageName, language);
 }
 
-function loadSamajPageDetails(typeFile, langFile) {
-   
+function loadSamajPageDetails(pageName, language) {
+   loadSiteInfo(pageName, language);
 }
 
-function loadContactPageDetails(typeFile, langFile) {
-   
+function loadContactPageDetails(pageName, language) {
+   loadSiteInfo(pageName, language);
 }
 
-function loadNewsPageDetails(typeFile, langFile) {
-   
+function loadNewsPageDetails(pageName, language) {
+   loadSiteInfo(pageName, language);
 }
 
-function loadHelpPageDetails(typeFile, langFile) {
-   
+function loadHelpPageDetails(pageName, language) {
+   loadSiteInfo(pageName, language);
 }
+
