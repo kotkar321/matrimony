@@ -1,165 +1,165 @@
 $(document).ready(function(){
 	$(".custom-control-input").click(function(){
 		$(".all").show();
-		if ($('#checkKashayp').is(":checked") || $('#checkKhalap').is(":checked") || $('#checkMandav').is(":checked") || $('#checkGahilam').is(":checked") || $('#checkGautam').is(":checked") || $('#checkLokaksha').is(":checked")) {
-			if ($('#checkKashayp').is(":checked")) 
-				console.log('your message');
+		if ($('#GotraFilter0').is(":checked") || $('#GotraFilter1').is(":checked") || $('#GotraFilter2').is(":checked") || $('#GotraFilter3').is(":checked") || $('#GotraFilter4').is(":checked") || $('#GotraFilter5').is(":checked")) {
+			if ($('#GotraFilter0').is(":checked")) 
+				//console.log('your message');
 			else
-				$(".Kashayp").hide();
+				$(".GotraFilter0").hide();
 			
-			if ($('#checkKhalap').is(":checked")) 
-				console.log('your message');
+			if ($('#GotraFilter1').is(":checked")) 
+				//console.log('your message');
 			else
-				$(".Khalap").hide();
+				$(".GotraFilter1").hide();
 			
-			if ($('#checkMandav').is(":checked")) 
-				console.log('your message');
+			if ($('#GotraFilter2').is(":checked")) 
+				//console.log('your message');
 			else
-				$(".Mandav").hide();
+				$(".GotraFilter2").hide();
 			
-			if ($('#checkGahilam').is(":checked")) 
-				console.log('your message');
+			if ($('#GotraFilter3').is(":checked")) 
+				//console.log('your message');
 			else
-				$(".Gahilam").hide();
+				$(".GotraFilter3").hide();
 			
-			if ($('#checkGautam').is(":checked")) 
-				console.log('your message');
+			if ($('#GotraFilter4').is(":checked")) 
+				//console.log('your message');
 			else
-				$(".Gautam").hide();
+				$(".GotraFilter4").hide();
 			
-			if ($('#checkLokaksha').is(":checked")) 
-				console.log('your message');
+			if ($('#GotraFilter5').is(":checked")) 
+				//console.log('your message');
 			else
-				$(".Lokaksha").hide();
+				$(".GotraFilter5").hide();
 		} else {
-			console.log('all gotra false');
+			//console.log('all gotra false');
 		}
 		
-		if ($('#checkPune').is(":checked") || $('#checkMumbai').is(":checked") || $('#chceckNagpur').is(":checked") || $('#checkNasik').is(":checked") || $('#checkAurangabad').is(":checked") || $('#checkDhule').is(":checked") || $('#checkJalgaon').is(":checked") || $('#checkNandurbar').is(":checked") || $('#checkSurat').is(":checked") || $('#checkForeignCountry').is(":checked") || $('#checkOther').is(":checked")) {
-			if ($('#checkPune').is(":checked")) 
-				console.log('your message');
+		if ($('#cityFilter0').is(":checked") || $('#cityFilter1').is(":checked") || $('#cityFilter2').is(":checked") || $('#cityFilter3').is(":checked") || $('#cityFilter4').is(":checked") || $('#cityFilter5').is(":checked") || $('#cityFilter6').is(":checked") || $('#cityFilter7').is(":checked") || $('#cityFilter8').is(":checked") || $('#cityFilter9').is(":checked") || $('#cityFilter10').is(":checked")) {
+			if ($('#cityFilter0').is(":checked")) 
+				//console.log('your message');
 			else
-				$(".Pune").hide();
+				$(".cityFilter0").hide();
 								
-			if ($('#checkMumbai').is(":checked")) 
-				console.log('your message');
+			if ($('#cityFilter1').is(":checked")) 
+				//console.log('your message');
 			else
-				$(".Mumbai").hide();
+				$(".cityFilter1").hide();
 			
-			if ($('#checkNagpur').is(":checked")) 
-				console.log('your message');
+			if ($('#cityFilter2').is(":checked")) 
+				//console.log('your message');
 			else
-				$(".Nagpur").hide();
+				$(".cityFilter2").hide();
 			
-			if ($('#checkNasik').is(":checked"))
-				console.log('your message');
+			if ($('#cityFilter3').is(":checked"))
+				//console.log('your message');
 			else			
-				$(".Nasik").hide();
+				$(".cityFilter3").hide();
 			
-			if ($('#checkAurangabad').is(":checked"))
-				console.log('your message');
+			if ($('#cityFilter4').is(":checked"))
+				//console.log('your message');
 			else			
-				$(".Aurangabad").hide();
+				$(".cityFilter4").hide();
 				
-			if ($('#checkDhule').is(":checked"))
-				console.log('your message');
+			if ($('#cityFilter5').is(":checked"))
+				//console.log('your message');
 			else			
-				$(".Dhule").hide();
+				$(".cityFilter5").hide();
 
-			if ($('#checkJalgaon').is(":checked"))
-				console.log('your message');
+			if ($('#cityFilter6').is(":checked"))
+				//console.log('your message');
 			else			
-				$(".Jalgaon").hide();
+				$(".cityFilter6").hide();
 
-			if ($('#checkNandurbar').is(":checked"))
-				console.log('your message');
+			if ($('#cityFilter7').is(":checked"))
+				//console.log('your message');
 			else			
-				$(".Nandurbar").hide();	
-			
-			if ($('#checkSurat').is(":checked"))
-				console.log('your message');
+				$(".cityFilter7").hide();	
+		
+			if ($('#cityFilter8').is(":checked"))
+				//console.log('your message');
 			else			
-				$(".Surat").hide();
+				$(".cityFilter8").hide();
 				
-			if ($('#checkForeignCountry').is(":checked"))
-				console.log('your message');
+			if ($('#cityFilter9').is(":checked"))
+				//console.log('your message');
 			else			
-				$(".ForeignCountry").hide();
+				$(".cityFilter9").hide();
 				
-			if ($('#checkOther').is(":checked"))
-				console.log('your message');
+			if ($('#cityFilter10').is(":checked"))
+				//console.log('your message');
 			else			
-				$(".Other").hide();	
+				$(".cityFilter10").hide();	
 				
 		} else {
-			console.log('all City false');
+			//console.log('all City false');
 		}
 		
-		if ($('#checkDoctor').is(":checked") || $('#checkEngineer').is(":checked") || $('#checkCA').is(":checked") || $('#checkBusinessman').is(":checked") || $('#checkEnterpreneur').is(":checked") || $('#checkBuilder').is(":checked") || $('#checkTeacher').is(":checked") || $('#checkFarmar').is(":checked") || $('#checkBankManager').is(":checked") || $('#checkPharmacist').is(":checked") || $('#checkMR').is(":checked") || $('#checkInsuranceAdvisor').is(":checked") || $('#checkOther').is(":checked")) {
-			if ($('#checkDoctor').is(":checked")) 
-				console.log('your message');
+		if ($('#occupationFilter0').is(":checked") || $('#occupationFilter1').is(":checked") || $('#occupationFilter2').is(":checked") || $('#occupationFilter3').is(":checked") || $('#occupationFilter4').is(":checked") || $('#occupationFilter5').is(":checked") || $('#occupationFilter6').is(":checked") || $('#occupationFilter7').is(":checked") || $('#occupationFilter8').is(":checked") || $('#occupationFilter9').is(":checked") || $('#occupationFilter10').is(":checked") || $('#occupationFilter11').is(":checked") || $('#occupationFilter12').is(":checked")) {
+			if ($('#occupationFilter0').is(":checked")) 
+				//console.log('your message');
 			else
-				$(".Doctor").hide();
+				$(".occupationFilter0").hide();
 								
-			if ($('#checkEngineer').is(":checked")) 
-				console.log('your message');
+			if ($('#occupationFilter1').is(":checked")) 
+				//console.log('your message');
 			else
-				$(".Engineer").hide();
+				$(".occupationFilter1").hide();
 			
-			if ($('#checkCA').is(":checked")) 
-				console.log('your message');	
+			if ($('#occupationFilter2').is(":checked")) 
+				//console.log('your message');	
 			else
-				$(".CA").hide();
+				$(".occupationFilter2").hide();
 				
-			if ($('#checkBusinessman').is(":checked")) 
-				console.log('your message');	
+			if ($('#occupationFilter3').is(":checked")) 
+				//console.log('your message');	
 			else
-				$(".Businessman").hide();
+				$(".occupationFilter3").hide();
 
-			if ($('#checkEnterpreneur').is(":checked")) 
-				console.log('your message');	
+			if ($('#occupationFilter4').is(":checked")) 
+				//console.log('your message');	
 			else
-				$(".Enterpreneur").hide();
+				$(".occupationFilter4").hide();
 				
-			if ($('#checkBuilder').is(":checked")) 
-				console.log('your message');	
+			if ($('#occupationFilter5').is(":checked")) 
+				//console.log('your message');	
 			else
-				$(".Builder").hide();
+				$(".occupationFilter5").hide();
 
-			if ($('#checkTeacher').is(":checked")) 
-				console.log('your message');	
+			if ($('#occupationFilter6').is(":checked")) 
+				//console.log('your message');	
 			else
-				$(".Teacher").hide();
+				$(".occupationFilter6").hide();
 				
-			if ($('#checkFarmar').is(":checked")) 
-				console.log('your message');	
+			if ($('#occupationFilter7').is(":checked")) 
+				//console.log('your message');	
 			else
-				$(".Farmar").hide();
+				$(".occupationFilter7").hide();
 
-			if ($('#checkBankManager').is(":checked")) 
-				console.log('your message');	
+			if ($('#occupationFilter8').is(":checked")) 
+				//console.log('your message');	
 			else
-				$(".BankManager").hide();
+				$(".occupationFilter8").hide();
 
-			if ($('#checkPharmacist').is(":checked")) 
-				console.log('your message');	
+			if ($('#occupationFilter9').is(":checked")) 
+				//console.log('your message');	
 			else
-				$(".Pharmacist").hide();
+				$(".occupationFilter9").hide();
 
-			if ($('#checkMR').is(":checked")) 
-				console.log('your message');	
+			if ($('#occupationFilter10').is(":checked")) 
+				//console.log('your message');	
 			else
-				$(".MR").hide();
+				$(".occupationFilter10").hide();
 
-			if ($('#checkInsuranceAdvisor').is(":checked")) 
-				console.log('your message');	
+			if ($('#occupationFilter11').is(":checked")) 
+				//console.log('your message');	
 			else
-				$(".InsuranceAdvisor").hide();	
+				$(".occupationFilter11").hide();	
 				
-			if ($('#checkOther').is(":checked")) 
-				console.log('your message');	
+			if ($('#occupationFilter12').is(":checked")) 
+				//console.log('your message');	
 			else
-				$(".Other").hide();	
+				$(".occupationFilter12").hide();	
 		} else {
 			console.log('all occupation false');
 		}
