@@ -57,8 +57,11 @@
 				
 			</div>
 			
-			<!-- No More Result -->
-			<!--<p><a class="btn btn-light card"> No More Result </a></p> -->
+			<!-- Load More Profile-->
+			<p>
+				<a id="loadMoreProfileButton" class="btn btn-light card"> Load More Profiles </a>
+				<input type="hidden" id="lastProfile" name="hidden" value="10000"><br>
+			</p>
 		</div>
 
 		<!-- Footer -->
@@ -77,12 +80,15 @@
 		<script src="JS/MyFilter.js"></script>
 		<script src="JS/externalCall.js"></script>
 		<script src="JS/mainCalls.js"></script>
+		<script src="JS/loadProfile.js"></script>
 		<script>
 			$(document).ready(function(){
 				loadGroomPageDetails("groom","en");
+				$("#loadMoreProfileButton").click(function(){
+					var lastProfileId = $("#lastProfile").val();
+					fetchProfiles(Number(lastProfileId), 6, "male", "en");
+				});
 			});
 		</script>
-		
-		
 	</body>
 </html>
