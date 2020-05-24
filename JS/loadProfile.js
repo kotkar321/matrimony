@@ -1,5 +1,5 @@
 function fetchProfile(profileId, pageName, language) {
-    console.log("fetchProfile invoked for ." + profileId);
+    console.log("fetchProfile invoked for id: " + profileId);
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
