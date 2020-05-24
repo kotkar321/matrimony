@@ -46,7 +46,8 @@
 			
 			<!-- Filter -->
 			<p>
-				<a id="loadMoreProfileButton" lastProfile="10000" class="btn btn-light card"> Load More Profiles </a>
+				<a id="loadMoreProfileButton" class="btn btn-light card"> Load More Profiles </a>
+				<input type="hidden" id="lastProfile" name="hidden" value="10000"><br>
 			</p>
 			
 		</div>
@@ -72,7 +73,7 @@
 			$(document).ready(function(){
 				loadSamajPageDetails("samaj","en");
 				$("#loadMoreProfileButton").click(function(){
-					var lastProfileId = $("loadMoreProfileButton").attr("lastProfile");
+					var lastProfileId = $("lastProfile").value();
 					fetchProfiles(Number(lastProfileId), 3, "samaj", "en");
 				});
 			});
