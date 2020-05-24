@@ -50,7 +50,7 @@ function fetchProfile(profileId, pageName, language) {
 function fetchProfiles(profileId, total, pageName, language) {
     for (count = 0; count < total; count++) {
         profileId = profileId + 1;
-        console.log("fetching Profile for id: " + profileId);
+        console.log("fetching Profile ID: " + profileId);
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
