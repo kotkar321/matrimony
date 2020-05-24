@@ -40,6 +40,6 @@ function fetchProfile(profileId, pageName, language) {
             document.getElementById("profiles").innerHTML = myStr;
         }
     };
-    xhttp.open("GET", "profiles/groom/" + "10001" + ".json", false);
+    xhttp.open("GET", "profiles/groom/" + profileId + ".json", false);
     xhttp.send();
 }
