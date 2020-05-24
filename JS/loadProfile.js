@@ -58,6 +58,8 @@ function fetchProfiles(profileId, total, pageName, language) {
         profileId = profileId + 1;
         console.log("fetching Profile ID: " + profileId);
         $.ajax({
+            type: "GET",
+            async: "false",
             url: "profiles/groom/" + profileId + ".json", 
             success: function(result){
                 var profileData = result;
@@ -104,6 +106,7 @@ function fetchProfiles(profileId, total, pageName, language) {
             }
         });
     }
+     $("#lastProfile").val(profileId);
 }
 
     
