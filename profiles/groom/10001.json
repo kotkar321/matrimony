@@ -6,7 +6,7 @@
   "gotra": "3",
   "occupation": "5",
   "height": "63",
-  "birthDate" : 
+  "birthDate": 
   {
     "birthDay": "10",
     "birthMonth": "5",
@@ -14,11 +14,11 @@
     "birthTimeHr": "18",
     "birthTimeMin": "30",
   },
-  "address" : {
+  "address": {
     "district": "3",
     "city": "2",
   },
-  "url" : {
+  "url": {
     "photo":"index.html",
     "bioData":"index.html"
   }
