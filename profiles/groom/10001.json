@@ -3,11 +3,23 @@
   "lastName" : "Kotkar",
   "firstNameMr" : "Harish",
   "lastNameMr" : "Kotkar",
-  "birthDate": "10-May-1992",
   "gotra": "1",
-  "district": "1",
-  "city": "1",
   "occupation": "1",
   "height": "63",
-  "url":"index.html"
+  "birthDate" : 
+  {
+    "birthDay": "10",
+    "birthMonth": "5",
+    "birthYear": "1992",
+    "birthTimeHr": "18",
+    "birthTimeMin": "30",
+  },
+  "address" : {
+    "district": "1",
+    "city": "1",
+  },
+  "url" : {
+    "photo":"index.html",
+    "bioData":"index.html"
+  }
 }
