@@ -1,0 +1,26 @@
+{
+  "id": "10006",
+  "gender": "female",
+  "firstName": "Harish",
+  "lastName": "Kotkar",
+  "firstNameMr": "HarishMr",
+  "lastNameMr": "KotkarMr",
+  "gotra": "3",
+  "occupation": "5",
+  "height": "63",
+  "birthDate": {
+    "birthDay": "10",
+    "birthMonth": "5",
+    "birthYear": "1992",
+    "birthTimeHr": "18",
+    "birthTimeMin": "30"
+  },
+  "address": {
+    "district": "3",
+    "city": "2"
+  },
+  "url": {
+    "photo": "index.html",
+    "bioData": "index.html"
+  }
+}
