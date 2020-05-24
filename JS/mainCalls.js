@@ -22,7 +22,7 @@ function loadBridePageDetails(pageName, language) {
 function loadSamajPageDetails(pageName, language) {
    loadSiteInfo(pageName, language);
    loadPageInfo(pageName, language);
-   fetchProfiles(10000, 3, pageName, language);
+   fetchProfiles(10000, 3, "male", language);
 }
 
 function loadContactPageDetails(pageName, language) {
