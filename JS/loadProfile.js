@@ -19,18 +19,18 @@ function fetchProfile(profileId, pageName, language) {
             }
             
             if(profile.gender == "male" && language == "en") {
-                myStr = replaceAll(myStr, 'TYPE', "Groom");							    
+                myStr = replaceAll(myStr, 'TYPE', "Groom" + "(" + profile.id + ")");							    
             }else if(profile.gender == "male" && language == "mr") {
-                myStr = replaceAll(myStr, 'TYPE', "वर");							    
+                myStr = replaceAll(myStr, 'TYPE', "वर" + "(" + profile.id + ")");							    
             } else if(profile.gender == "female" && language == "en") {
-                myStr = replaceAll(myStr, 'TYPE', "Bride");							    
+                myStr = replaceAll(myStr, 'TYPE', "Bride"+ "(" + profile.id + ")");							    
             } else if(profile.gender == "female" && language == "mr") {
-                myStr = replaceAll(myStr, 'TYPE', "वधू");							    
+                myStr = replaceAll(myStr, 'TYPE', "वधू"+ "(" + profile.id + ")");							    
             }
             
-            myStr = replaceAll(myStr, 'NAME', profile.firstName + " " + profile.firstName);	    
+            myStr = replaceAll(myStr, 'NAME', profile.firstName + " " + profile.lastName );
             if(language == "mr") {
-                myStr = replaceAll(myStr, 'NAME', profile.firstNameMr + " " + profile.firstNameMr);	    
+                myStr = replaceAll(myStr, 'NAME', profile.firstNameMr + " " + profile.lastNameMr);	    
             }
             myStr = replaceAll(myStr, 'BIRTHDATE', profile.birthDate.birthDay + "-" + profile.birthDate.birthMonth + "-" +profile.birthDate.birthYear + " " + profile.birthDate.birthTimeHr + ":"+ profile.birthDate.birthTimeMin);
             myStr = replaceAll(myStr, 'GOTRA', profile.gotra);
@@ -70,18 +70,18 @@ function fetchProfiles(profileId, total, pageName, language) {
                     }
 
                     if(profile.gender == "male" && language == "en") {
-                        myStr = replaceAll(myStr, 'TYPE', "Groom");							    
+                        myStr = replaceAll(myStr, 'TYPE', "Groom" + "(" + profile.id + ")");							    
                     }else if(profile.gender == "male" && language == "mr") {
-                        myStr = replaceAll(myStr, 'TYPE', "वर");							    
+                        myStr = replaceAll(myStr, 'TYPE', "वर" + "(" + profile.id + ")");							    
                     } else if(profile.gender == "female" && language == "en") {
-                        myStr = replaceAll(myStr, 'TYPE', "Bride");							    
+                        myStr = replaceAll(myStr, 'TYPE', "Bride"+ "(" + profile.id + ")");							    
                     } else if(profile.gender == "female" && language == "mr") {
-                        myStr = replaceAll(myStr, 'TYPE', "वधू");							    
+                        myStr = replaceAll(myStr, 'TYPE', "वधू"+ "(" + profile.id + ")");							    
                     }
 
-                    myStr = replaceAll(myStr, 'NAME', profile.firstName + " " + profile.firstName + "(" + profile.id + ")");	    
+                    myStr = replaceAll(myStr, 'NAME', profile.firstName + " " + profile.lastName + "(" + profile.id + ")");	    
                     if(language == "mr") {
-                        myStr = replaceAll(myStr, 'NAME', profile.firstNameMr + " " + profile.firstNameMr);	    
+                        myStr = replaceAll(myStr, 'NAME', profile.firstNameMr + " " + profile.lastNameMr);	    
                     }
                     myStr = replaceAll(myStr, 'BIRTHDATE', profile.birthDate.birthDay + "-" + profile.birthDate.birthMonth + "-" +profile.birthDate.birthYear + " " + profile.birthDate.birthTimeHr + ":"+ profile.birthDate.birthTimeMin);
                     myStr = replaceAll(myStr, 'GOTRA', profile.gotra);
