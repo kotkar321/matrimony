@@ -47,9 +47,7 @@ function fetchProfiles(profileId, total, pageName, language) {
                 $("#loadMoreProfileButton").hide();
                 count = total;
             }
-            
         };
-        
         xhttp.open("GET", "profiles/groom/" + profileId + ".json", false);
         xhttp.send();        
     }
