@@ -95,4 +95,5 @@ function fetchProfiles(profileId, total, pageName, language) {
         xhttp.open("GET", "profiles/groom/" + profileId + ".json", true);
         xhttp.send();        
     }
+    $("#lastProfile").val(profileId);
 }
