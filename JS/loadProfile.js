@@ -17,6 +17,7 @@ function fetchProfile(profileId, pageName, language) {
                 myStr = replaceAll(myStr, 'Work City', 'कार्य शहर');	    
                 myStr = replaceAll(myStr, 'Height', 'उंची');	    
             }
+            
             if(profile.gender == "male" && language == "en") {
                 myStr = replaceAll(myStr, 'TYPE', "Groom");							    
             }else if(profile.gender == "male" && language == "mr") {
@@ -46,49 +47,54 @@ function fetchProfile(profileId, pageName, language) {
 
 
 
-function fetchProfile(profileId, count, pageName, language) {
-    console.log("fetchProfile invoked for id: " + profileId);
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var profileData = this.responseText;
-            var profile = JSON.parse(profileData);
-            console.log("Profile :" + profile);
-            var myStr = "<div class='col-md-4 GOTRA OCCUPATION CITY all'><div class='row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'><div class='col p-4 d-flex flex-column position-static'><strong class='d-inline-block text-success'>TYPE</strong><h3 class='mb-0'>NAME</h3><div class='mb-1 text-muted'>BIRTHDATE</div><div class=''>Height : <b><i>HEIGHT</i></b> </div><div class=''>Gotra : <b><i>GOTRA</i></b> </div><div class=''>Occupation : <b><i>OCCUPATION</i></b></div><div class=''>Work City : <b><i>CITY </i></b></div><a href='URL' class='' id='linkInfo'> More Info... </a></div></div></div>";
+function fetchProfiles(profileId, total, pageName, language) {
+    var count = 0;
+    while (count < 12) {
+        profileId = profileId + 1;
+        console.log("fetching Profile for id: " + profileId);
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var profileData = this.responseText;
+                var profile = JSON.parse(profileData);
+                console.log("Profile :" + profile);
+                var myStr = "<div class='col-md-4 GOTRA OCCUPATION CITY all'><div class='row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'><div class='col p-4 d-flex flex-column position-static'><strong class='d-inline-block text-success'>TYPE</strong><h3 class='mb-0'>NAME</h3><div class='mb-1 text-muted'>BIRTHDATE</div><div class=''>Height : <b><i>HEIGHT</i></b> </div><div class=''>Gotra : <b><i>GOTRA</i></b> </div><div class=''>Occupation : <b><i>OCCUPATION</i></b></div><div class=''>Work City : <b><i>CITY </i></b></div><a href='URL' class='' id='linkInfo'> More Info... </a></div></div></div>";
 
-            if(profile !== undefined) {
+                if(profile !== undefined) {
+                    
+                    if(language == "mr") {
+                        myStr = replaceAll(myStr, 'Gotra', 'गोत्र');	    
+                        myStr = replaceAll(myStr, 'Occupation', 'व्यवसाय');	    
+                        myStr = replaceAll(myStr, 'Work City', 'कार्य शहर');	    
+                        myStr = replaceAll(myStr, 'Height', 'उंची');	    
+                    }
+
+                    if(profile.gender == "male" && language == "en") {
+                        myStr = replaceAll(myStr, 'TYPE', "Groom");							    
+                    }else if(profile.gender == "male" && language == "mr") {
+                        myStr = replaceAll(myStr, 'TYPE', "वर");							    
+                    } else if(profile.gender == "female" && language == "en") {
+                        myStr = replaceAll(myStr, 'TYPE', "Bride");							    
+                    } else if(profile.gender == "female" && language == "mr") {
+                        myStr = replaceAll(myStr, 'TYPE', "वधू");							    
+                    }
+
+                    myStr = replaceAll(myStr, 'NAME', profile.firstName + " " + profile.firstName + "(" + profile.id + ")");	    
+                    if(language == "mr") {
+                        myStr = replaceAll(myStr, 'NAME', profile.firstNameMr + " " + profile.firstNameMr);	    
+                    }
+                    myStr = replaceAll(myStr, 'BIRTHDATE', profile.birthDate.birthDay + "-" + profile.birthDate.birthMonth + "-" +profile.birthDate.birthYear + " " + profile.birthDate.birthTimeHr + ":"+ profile.birthDate.birthTimeMin);
+                    myStr = replaceAll(myStr, 'GOTRA', profile.gotra);
+                    myStr = replaceAll(myStr, 'OCCUPATION', profile.occupation);
+                    myStr = replaceAll(myStr, 'CITY', profile.address.district + " " + profile.address.city);
+                    myStr = replaceAll(myStr, 'HEIGHT', profile.height);
+                    myStr = replaceAll(myStr, 'URL', profile.url.bioData);
+                    document.getElementById("profiles").innerHTML = document.getElementById("profiles").innerHTML + myStr;
+                    count++;
+                }
             }
-            
-            if(language == "mr") {
-                myStr = replaceAll(myStr, 'Gotra', 'गोत्र');	    
-                myStr = replaceAll(myStr, 'Occupation', 'व्यवसाय');	    
-                myStr = replaceAll(myStr, 'Work City', 'कार्य शहर');	    
-                myStr = replaceAll(myStr, 'Height', 'उंची');	    
-            }
-            
-            if(pageName == "groom" && language == "en") {
-                myStr = replaceAll(myStr, 'TYPE', "Groom");							    
-            }else if(pageName == "groom" && language == "mr") {
-                myStr = replaceAll(myStr, 'TYPE', "वर");							    
-            } else if(pageName == "bride" && language == "en") {
-                myStr = replaceAll(myStr, 'TYPE', "Bride");							    
-            } else if(pageName == "bride" && language == "mr") {
-                myStr = replaceAll(myStr, 'TYPE', "वधू");							    
-            }
-            
-            myStr = replaceAll(myStr, 'NAME', profile.firstName + " " + profile.firstName + "(" + profile.id + ")");	    
-            if(language == "mr") {
-                myStr = replaceAll(myStr, 'NAME', profile.firstNameMr + " " + profile.firstNameMr);	    
-            }
-            myStr = replaceAll(myStr, 'BIRTHDATE', profile.birthDate.birthDay + "-" + profile.birthDate.birthMonth + "-" +profile.birthDate.birthYear + " " + profile.birthDate.birthTimeHr + ":"+ profile.birthDate.birthTimeMin);
-            myStr = replaceAll(myStr, 'GOTRA', profile.gotra);
-            myStr = replaceAll(myStr, 'OCCUPATION', profile.occupation);
-            myStr = replaceAll(myStr, 'CITY', profile.address.district + " " + profile.address.city);
-            myStr = replaceAll(myStr, 'HEIGHT', profile.height);
-            myStr = replaceAll(myStr, 'URL', profile.url.bioData);
-            document.getElementById("profiles").innerHTML = myStr;
-        }
-    };
-    xhttp.open("GET", "profiles/groom/" + profileId + ".json", false);
-    xhttp.send();
+        };
+        xhttp.open("GET", "profiles/groom/" + profileId + ".json", false);
+        xhttp.send();        
+    }
 }
