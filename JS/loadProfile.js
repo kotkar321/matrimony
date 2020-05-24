@@ -69,16 +69,16 @@ function fetchProfiles(profileId, total, pageName, language) {
                     }
 
                     if(profile.gender == "male" && language == "en") {
-                        myStr = replaceAll(myStr, 'TYPE', "Groom" + "(" + profile.id + ")");							    
+                        myStr = replaceAll(myStr, 'TYPE', "Groom" + " [" + profile.id + "]");
                     }else if(profile.gender == "male" && language == "mr") {
-                        myStr = replaceAll(myStr, 'TYPE', "वर" + "(" + profile.id + ")");							    
+                        myStr = replaceAll(myStr, 'TYPE', "वर" + " [" + profile.id + "]");							    
                     } else if(profile.gender == "female" && language == "en") {
-                        myStr = replaceAll(myStr, 'TYPE', "Bride"+ "(" + profile.id + ")");							    
+                        myStr = replaceAll(myStr, 'TYPE', "Bride"+ " [" + profile.id + "]");							    
                     } else if(profile.gender == "female" && language == "mr") {
-                        myStr = replaceAll(myStr, 'TYPE', "वधू"+ "(" + profile.id + ")");							    
+                        myStr = replaceAll(myStr, 'TYPE', "वधू"+ " [" + profile.id + "]");							    
                     }
 
-                    myStr = replaceAll(myStr, 'NAME', profile.firstName + " " + profile.lastName + "(" + profile.id + ")");	    
+                    myStr = replaceAll(myStr, 'NAME', profile.firstName + " " + profile.lastName);	    
                     if(language == "mr") {
                         myStr = replaceAll(myStr, 'NAME', profile.firstNameMr + " " + profile.lastNameMr);	    
                     }
