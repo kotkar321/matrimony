@@ -1,10 +1,10 @@
 {
   "firstName" : "Harish",
   "lastName" : "Kotkar",
-  "firstNameMr" : "Harish",
-  "lastNameMr" : "Kotkar",
-  "gotra": "1",
-  "occupation": "1",
+  "firstNameMr" : "HarishMr",
+  "lastNameMr" : "KotkarMr",
+  "gotra": "3",
+  "occupation": "5",
   "height": "63",
   "birthDate" : 
   {
@@ -15,8 +15,8 @@
     "birthTimeMin": "30",
   },
   "address" : {
-    "district": "1",
-    "city": "1",
+    "district": "3",
+    "city": "2",
   },
   "url" : {
     "photo":"index.html",
