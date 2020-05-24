@@ -1,7 +1,6 @@
 function loadProfiles(pageName, language) {
     console.log("loadProfiles invoked.");
     var xhttp = new XMLHttpRequest();
-    
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var profile = this.responseText;
@@ -27,16 +26,20 @@ function loadProfiles(pageName, language) {
             } else if(pageName == "bride" && language == "mr") {
                 myStr = replaceAll(myStr, 'TYPE', "वधू");							    
             }
-            myStr = replaceAll(myStr, 'NAME', values[1]);	    
-            myStr = replaceAll(myStr, 'BIRTHDATE', values[2]);
-            myStr = replaceAll(myStr, 'GOTRA', values[3]);
-            myStr = replaceAll(myStr, 'OCCUPATION', values[4]);
-            myStr = replaceAll(myStr, 'CITY', values[5]);
-            myStr = replaceAll(myStr, 'HEIGHT', values[6]);
-            myStr = replaceAll(myStr, 'URL', values[7]);
-            finalDataString = finalDataString + myStr;
-          }
-        });
-        document.getElementById("profiles/groom"+"10001").innerHTML = finalDataString;
-      }
-  };
+            
+            myStr = replaceAll(myStr, 'NAME', profile.firstName + " " + profile.firstName);	    
+            if(language == "mr") {
+                myStr = replaceAll(myStr, 'NAME', profile.firstNameMr + " " + profile.firstNameMr);	    
+            }
+            myStr = replaceAll(myStr, 'BIRTHDATE', profile.birthDate);
+            myStr = replaceAll(myStr, 'GOTRA', profile.gotra);
+            myStr = replaceAll(myStr, 'OCCUPATION', profile.occupation);
+            myStr = replaceAll(myStr, 'CITY', profile.city);
+            myStr = replaceAll(myStr, 'HEIGHT', profile.height);
+            myStr = replaceAll(myStr, 'URL', profile.url);
+            document.getElementById("profiles/groom"+"10001").innerHTML = myStr;
+        }
+    };
+    xhttp.open("GET", "CSV/" + pageName + "_"+ language + ".csv", false);
+    xhttp.send();
+}
