@@ -73,7 +73,7 @@
 			$(document).ready(function(){
 				loadSamajPageDetails("samaj","en");
 				$("#loadMoreProfileButton").click(function(){
-					var lastProfileId = $("lastProfile").value();
+					var lastProfileId = $("lastProfile").val();
 					fetchProfiles(Number(lastProfileId), 3, "samaj", "en");
 				});
 			});
