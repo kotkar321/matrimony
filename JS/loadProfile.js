@@ -48,8 +48,7 @@ function fetchProfile(profileId, pageName, language) {
 
 
 function fetchProfiles(profileId, total, pageName, language) {
-    var count = 0;
-    while (count < 12) {
+    for (count = 0; count < total; count++) {
         profileId = profileId + 1;
         console.log("fetching Profile for id: " + profileId);
         var xhttp = new XMLHttpRequest();
@@ -90,7 +89,6 @@ function fetchProfiles(profileId, total, pageName, language) {
                     myStr = replaceAll(myStr, 'HEIGHT', profile.height);
                     myStr = replaceAll(myStr, 'URL', profile.url.bioData);
                     document.getElementById("profiles").innerHTML = document.getElementById("profiles").innerHTML + myStr;
-                    count++;
                 }
             }
         };
