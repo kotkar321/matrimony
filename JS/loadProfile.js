@@ -43,7 +43,7 @@ function fetchProfiles(profileId, total, pageName, language) {
                 else {
                     count--;
                 } 
-            } else if (this.readyState == 1 && this.status == 0) {
+            } else if (this.status != 200) {
                 $("#loadMoreProfileButton").hide();
                 count = total;
             }
