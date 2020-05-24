@@ -92,7 +92,7 @@ function fetchProfiles(profileId, total, pageName, language) {
                 }
             }
         };
-        xhttp.open("GET", "profiles/groom/" + profileId + ".json", false);
+        xhttp.open("GET", "profiles/groom/" + profileId + ".json", true);
         xhttp.send();        
     }
 }
