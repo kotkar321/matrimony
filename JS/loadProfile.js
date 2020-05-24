@@ -37,7 +37,6 @@ function loadProfiles(pageName, language) {
             myStr = replaceAll(myStr, 'CITY', profile.city);
             myStr = replaceAll(myStr, 'HEIGHT', profile.height);
             myStr = replaceAll(myStr, 'URL', profile.url);
-            document.getElementById("profiles/groom"+"10001").innerHTML = myStr;
             document.getElementById("profiles").innerHTML = myStr;
         }
     };
