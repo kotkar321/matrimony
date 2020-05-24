@@ -1,4 +1,4 @@
-function loadProfiles(pageName, language) {
+function fetchProfile(profileId, pageName, language) {
     console.log("loadProfiles invoked.");
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
