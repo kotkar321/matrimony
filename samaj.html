@@ -71,6 +71,10 @@
 		<script>
 			$(document).ready(function(){
 				loadSamajPageDetails("samaj","en");
+				$("#loadMoreProfileButton").click(function(){
+					var lastProfileId = $("loadMoreProfileButton").attr("lastProfile");
+					fetchProfiles(lastProfileId, 3, "groom", "en");
+				});
 			});
 		</script>
 		
