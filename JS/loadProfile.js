@@ -38,8 +38,9 @@ function loadProfiles(pageName, language) {
             myStr = replaceAll(myStr, 'HEIGHT', profile.height);
             myStr = replaceAll(myStr, 'URL', profile.url);
             document.getElementById("profiles/groom"+"10001").innerHTML = myStr;
+            document.getElementById("profiles").innerHTML = myStr;
         }
     };
-    xhttp.open("GET", "CSV/" + pageName + "_"+ language + ".csv", false);
+    xhttp.open("GET", "profiles/groom/" + "10001" + ".json", false);
     xhttp.send();
 }
