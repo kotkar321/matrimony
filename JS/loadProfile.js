@@ -97,7 +97,7 @@ function fetchProfiles(profileId, total, pageName, language) {
                 else {
                     count--;
                 } 
-            }
+            },
             error: function(xhr) {
                 $("#loadMoreProfileButton").hide();
                 count = total;
