@@ -32,7 +32,7 @@ function fetchProfile(profileId, pageName, language) {
             if(language == "mr") {
                 myStr = replaceAll(myStr, 'NAME', profile.firstNameMr + " " + profile.firstNameMr);	    
             }
-            myStr = replaceAll(myStr, 'BIRTHDATE', profile.birthDate.birthDay + " - " + profile.birthDate.birthMonth + " - " +profile.birthDate.birthYear + " " + profile.birthDate.birthHr + ":"+ profile.birthDate.birthHr);
+            myStr = replaceAll(myStr, 'BIRTHDATE', profile.birthDate.birthDay + "-" + profile.birthDate.birthMonth + "-" +profile.birthDate.birthYear + " " + profile.birthDate.birthTimeHr + ":"+ profile.birthDate.birthTimeMin);
             myStr = replaceAll(myStr, 'GOTRA', profile.gotra);
             myStr = replaceAll(myStr, 'OCCUPATION', profile.occupation);
             myStr = replaceAll(myStr, 'CITY', profile.address.district + " " + profile.address.city);
