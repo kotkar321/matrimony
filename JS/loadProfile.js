@@ -40,6 +40,10 @@ function fetchProfiles(profileId, total, pageName, language) {
                     myStr = replaceAll(myStr, 'URL', profile.url.bioData);
                     document.getElementById("profiles").innerHTML = document.getElementById("profiles").innerHTML + myStr;
                 }
+                else if(this.status == 404) {
+                    $("#loadMoreProfileButton").hide();
+                    break;
+                }
                 else {
                     count--;
                 } 
@@ -49,5 +53,4 @@ function fetchProfiles(profileId, total, pageName, language) {
         xhttp.send();        
     }
     $("#lastProfile").val(profileId);
-    $("#loadMoreProfileButton").hide();
 }
