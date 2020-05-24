@@ -43,11 +43,11 @@ function fetchProfiles(profileId, total, pageName, language) {
                 else {
                     count--;
                 } 
-            } 
-        };
-        xhttp.onerror = function() { // only triggers if the request couldn't be made at all
-            $("#loadMoreProfileButton").hide();
-            count = total;
+            }
+            if (this.readyState == 4 && this.status != 200) {
+                $("#loadMoreProfileButton").hide();
+                count = total;    
+            }
         };
         xhttp.open("GET", "profiles/groom/" + profileId + ".json", false);
         xhttp.send();        
