@@ -6,17 +6,16 @@
   "gotra": "3",
   "occupation": "5",
   "height": "63",
-  "birthDate":
-  {
+  "birthDate": {
     "birthDay": "10",
     "birthMonth": "5",
     "birthYear": "1992",
     "birthTimeHr": "18",
-    "birthTimeMin": "30",
+    "birthTimeMin": "30"
   },
   "address": {
     "district": "3",
-    "city": "2",
+    "city": "2"
   },
   "url": {
     "photo": "index.html",
