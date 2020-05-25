@@ -1,41 +1,29 @@
 $(document).ready(function(){
-	$(".custom-control-input").click(function(){
-		$(".all").show();
+	$("#SearchFilterButton").click(function(){
+		var gotra = [];
+		var occupation = [];
+		var city = [];
+		var year = [];
+		var height = [];
+		
 		if ($('#GotraFilter0').is(":checked") || $('#GotraFilter1').is(":checked") || $('#GotraFilter2').is(":checked") || $('#GotraFilter3').is(":checked") || $('#GotraFilter4').is(":checked") || $('#GotraFilter5').is(":checked")) {
 			if ($('#GotraFilter0').is(":checked")) {
-				console.log('-'+$("#GotraFilter_0").text()+'-');
-			} else {
-				$("."+$("#GotraFilter_0").text()).hide();
+				gotra.push("0");
 			}
-			
 			if ($('#GotraFilter1').is(":checked")) {
-				console.log('-'+$("#GotraFilter_1").text()+'-');
-			} else {
-				$("."+$("#GotraFilter_1").text()).hide();
+				gotra.push("1");
 			}
-			
 			if ($('#GotraFilter2').is(":checked")) {
-				console.log('-'+$("#GotraFilter_2").text()+'-');
-			} else {
-				$("."+$("#GotraFilter_2").text()).hide();
+				gotra.push("2");
 			}
-			
 			if ($('#GotraFilter3').is(":checked")) {
-				console.log('-'+$("#GotraFilter_3").text()+'-');
-			} else {
-				$("."+$("#GotraFilter_3").text()).hide();
+				gotra.push("3");
 			}
-			
 			if ($('#GotraFilter4').is(":checked")) {
-				console.log('-'+$("#GotraFilter_4").text()+'-');
-			} else {
-				$("."+$("#GotraFilter_4").text()).hide();
+				gotra.push("4");
 			}
-			
 			if ($('#GotraFilter5').is(":checked")) {
-				console.log('-'+$("#GotraFilter_5").text()+'-');
-			} else {
-				$("."+$("#GotraFilter_5").text()).hide();
+				gotra.push("5");
 			}
 		} else {
 			console.log('all gotra false');
@@ -43,155 +31,127 @@ $(document).ready(function(){
 		
 		if ($('#cityFilter0').is(":checked") || $('#cityFilter1').is(":checked") || $('#cityFilter2').is(":checked") || $('#cityFilter3').is(":checked") || $('#cityFilter4').is(":checked") || $('#cityFilter5').is(":checked") || $('#cityFilter6').is(":checked") || $('#cityFilter7').is(":checked") || $('#cityFilter8').is(":checked") || $('#cityFilter9').is(":checked") || $('#cityFilter10').is(":checked")) {
 			if ($('#cityFilter0').is(":checked")) {
-				console.log('-'+$("#cityFilter_0").text()+'-');
-			} else {
-				$("."+$("#cityFilter_0").text()).hide();
+				city.push("0");
 			}			
-			
 			if ($('#cityFilter1').is(":checked")) {
-				console.log('-'+$("#cityFilter_1").val()+'-');
-			} else {
-				$("."+$("#cityFilter_1").text()).hide();
+				city.push("1");
 			}
 			if ($('#cityFilter2').is(":checked")) {
-				console.log('-'+$("#cityFilter_2").html()+'-');
-			} else {
-				$("."+$("#cityFilter_2").text()).hide();
+				city.push("2");
 			}
-			
 			if ($('#cityFilter3').is(":checked")) {
-				console.log('-'+$("#cityFilter_3").html()+'-');
-			} else {
-				$("."+$("#cityFilter_3").text()).hide();
+				city.push("3");
 			}
-			
 			if ($('#cityFilter4').is(":checked")) {
-				console.log('-'+$("#cityFilter_4").html()+'-');
-			} else {
-				$("."+$("#cityFilter_4").text()).hide();
+				city.push("4");
 			}
-			
 			if ($('#cityFilter5').is(":checked")) {
-				console.log('-'+$("#cityFilter_5").html()+'-');
-			} else {
-				$("."+$("#cityFilter_5").text()).hide();
+				city.push("5");
 			}
-			
 			if ($('#cityFilter6').is(":checked")) {
-				console.log('-'+$("#cityFilter_6").html()+'-');
-			} else {			
-				$("."+$("#cityFilter_6").text()).hide();
+				city.push("6");
 			}
-			
 			if ($('#cityFilter7').is(":checked")) {
-				console.log('-'+$("#cityFilter_7").html()+'-');
-			} else {			
-				$("."+$("#cityFilter_7").text()).hide();
+				city.push("7");
 			}
-			
 			if ($('#cityFilter8').is(":checked")) {
-				console.log('-'+$("#cityFilter_8").html()+'-');
-			} else {			
-				$("."+$("#cityFilter_8").text()).hide();
+				city.push("8");
 			}
-			
 			if ($('#cityFilter9').is(":checked")) {
-				console.log('-'+$("#cityFilter_9").html()+'-');
-			} else {			
-				$("."+$("#cityFilter_9").text()).hide();
+				city.push("9");
 			}
-			
 			if ($('#cityFilter10').is(":checked")) {
-				console.log('-'+$("#cityFilter_10").html()+'-');
-			} else {			
-				$("."+$("#cityFilter_10").text()).hide();
+				city.push("10");
 			}
-			
 		} else {
 			console.log('all City false');
 		}
 		
 		if ($('#occupationFilter0').is(":checked") || $('#occupationFilter1').is(":checked") || $('#occupationFilter2').is(":checked") || $('#occupationFilter3').is(":checked") || $('#occupationFilter4').is(":checked") || $('#occupationFilter5').is(":checked") || $('#occupationFilter6').is(":checked") || $('#occupationFilter7').is(":checked") || $('#occupationFilter8').is(":checked") || $('#occupationFilter9').is(":checked") || $('#occupationFilter10').is(":checked") || $('#occupationFilter11').is(":checked") || $('#occupationFilter12').is(":checked")) {
 			if ($('#occupationFilter0').is(":checked")) {
-				console.log('your message');
-			} else {
-				$("."+$("#occupationFilter_0").text()).hide();
+				occupation.push("0");
 			}
-			
 			if ($('#occupationFilter1').is(":checked")) {
-				console.log('your message');
-			} else {
-				$("."+$("#occupationFilter_1").text()).hide();
+				occupation.push("1");
 			}
-			
 			if ($('#occupationFilter2').is(":checked")) {
-				console.log('your message');	
-			} else {
-				$("."+$("#occupationFilter_2").text()).hide();
+				occupation.push("2");	
 			}
-			
 			if ($('#occupationFilter3').is(":checked")) {
-				console.log('your message');	
-			} else {
-				$("."+$("#occupationFilter_3").text()).hide();
+				occupation.push("3");	
 			}
-			
 			if ($('#occupationFilter4').is(":checked")) {
-				console.log('your message');	
-			} else {
-				$("."+$("#occupationFilter_4").text()).hide();
+				occupation.push("4");	
 			}
-			
 			if ($('#occupationFilter5').is(":checked")) {
-				console.log('your message');	
-			} else {
-				$("."+$("#occupationFilter_5").text()).hide();
+				occupation.push("5");	
 			}
-			
 			if ($('#occupationFilter6').is(":checked")) {
-				console.log('your message');	
-			} else {
-				$("."+$("#occupationFilter_6").text()).hide();
+				occupation.push("6");	
 			}
-			
 			if ($('#occupationFilter7').is(":checked")) {
-				console.log('your message');	
-			} else {
-				$("."+$("#occupationFilter_7").text()).hide();
+				occupation.push("7");	
 			}
-			
 			if ($('#occupationFilter8').is(":checked")) {
-				console.log('your message');	
-			} else {
-				$("."+$("#occupationFilter_8").text()).hide();
+				occupation.push("8");	
 			}
-			
 			if ($('#occupationFilter9').is(":checked")) {
-				console.log('your message');	
-			} else {
-				$("."+$("#occupationFilter_9").text()).hide();
+				occupation.push("9");	
 			}
-			
 			if ($('#occupationFilter10').is(":checked")) {
-				console.log('your message');	
-			} else {
-				$("."+$("#occupationFilter_10").text()).hide();
+				occupation.push("10");	
 			}
-			
 			if ($('#occupationFilter11').is(":checked")) {
-				console.log('your message');	
-			} else {
-				$("."+$("#occupationFilter_11").text()).hide();
+				occupation.push("11");	
 			}
-			
 			if ($('#occupationFilter12').is(":checked")) {
-				console.log('your message');	
-			} else {
-				$("."+$("#occupationFilter_12").text()).hide();
+				occupation.push("12");	
 			}
-			
 		} else {
 			console.log('all occupation false');
+		}
+		
+		if ($('#BirthFilter0').is(":checked") || $('#BirthFilter1').is(":checked") || $('#BirthFilter2').is(":checked") || $('#BirthFilter3').is(":checked") || $('#BirthFilter4').is(":checked")) {
+			if ($('#BirthFilter0').is(":checked")) {
+				year.push("0");
+			}
+			if ($('#BirthFilter1').is(":checked")) {
+				year.push("1");
+			}
+			if ($('#BirthFilter2').is(":checked")) {
+				year.push("2");
+			}
+			if ($('#BirthFilter3').is(":checked")) {
+				year.push("3");
+			}
+			if ($('#BirthFilter4').is(":checked")) {
+				year.push("4");
+			}
+		} else {
+			console.log('all year false');
+		}
+		
+		if ($('#HeightFilter0').is(":checked") || $('#HeightFilter1').is(":checked") || $('#HeightFilter2').is(":checked") || $('#HeightFilter3').is(":checked") || $('#HeightFilter4').is(":checked") || $('#HeightFilter5').is(":checked")) {
+			if ($('#HeightFilter0').is(":checked")) {
+				height.push("0");
+			}
+			if ($('#HeightFilter1').is(":checked")) {
+				height.push("1");
+			}
+			if ($('#HeightFilter2').is(":checked")) {
+				height.push("2");
+			}
+			if ($('#HeightFilter3').is(":checked")) {
+				height.push("3");
+			}
+			if ($('#HeightFilter4').is(":checked")) {
+				height.push("4");
+			}
+			if ($('#HeightFilter5').is(":checked")) {
+				height.push("5");
+			}
+		} else {
+			console.log('all height false');
 		}
 		
 	});
