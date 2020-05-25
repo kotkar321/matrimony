@@ -214,11 +214,14 @@ $(document).ready(function(){
 		    if (this.readyState == 4 && this.status != 200) {
 			$("#loadMoreProfileButton").hide();
 			count = total;    
+		    } else {
+			$("#loadMoreProfileButton").show();
 		    }
 		};
 		xhttp.open("GET", "profiles/groom/" + profileId + ".json", false);
 		xhttp.send();        
 	    }
+	    $("#lastProfile").val(profileId);
 	}	
 	
 	function isMatched(filters, profile) {
