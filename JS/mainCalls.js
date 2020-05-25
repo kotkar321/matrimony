@@ -29,9 +29,11 @@ function loadContactPageDetails(pageName, language) {
    loadPageInfo(pageName, language);
 }
 
-function loadNewsPageDetails(pageName, language) {
+function loadSearchPageDetails(pageName, language) {
    loadSiteInfo(pageName, language);
    loadPageInfo(pageName, language);
+   loadFilters(pageName, language);
+}
 }
 
 function loadHelpPageDetails(pageName, language) {
