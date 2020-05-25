@@ -151,6 +151,22 @@
 								document.getElementById("occupationFilter_"+count).innerHTML = dataValue;
 							}
 						});
+					    } else if(keys[0] == "4") {	
+						document.getElementById("birthFilterText").innerHTML = keys[1];
+					    	var filters = values[1].split(",");
+						$.each(filters, function(count, dataValue){
+							if(dataValue !== undefined || dataValue != "") {    
+								document.getElementById("BirthFilter_"+count).innerHTML = dataValue;
+							}
+						});
+					    } else if(keys[0] == "5") {	
+						document.getElementById("heightFilterText").innerHTML = keys[1];
+					    	var filters = values[1].split(",");
+						$.each(filters, function(count, dataValue){
+							if(dataValue !== undefined || dataValue != "") {    
+								document.getElementById("HeightFilter_"+count).innerHTML = dataValue;
+							}
+						});
 					    } 
 				    });
 			    }
