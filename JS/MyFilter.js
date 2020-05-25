@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$("#loadMoreProfileButton").hide();
-	$("#SearchFilterButton").click(function(){
+	
+	function filterProfiles(profileId, total, language) { 
 		var filters = [];
 		var gotra = [];
 		var occupation = [];
@@ -167,7 +168,8 @@ $(document).ready(function(){
 		filters.push(height);
 		
 		searchProfiles("male", filters, 10000, 15, "en");
-	});
+	}
+	
 	function searchProfiles(type, filters, profileId, total, language) {
 	    for (count = 0; count < total; count++) {
 		profileId = profileId + 1;
