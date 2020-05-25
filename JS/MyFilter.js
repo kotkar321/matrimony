@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	$("#loadMoreProfileButton").hide();
 	$("#SearchFilterButton").click(function(){
 		var filters = [];
 		var gotra = [];
