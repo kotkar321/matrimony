@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$("#SearchFilterButton").click(function(){
+		var filters = [];
 		var gotra = [];
 		var occupation = [];
 		var city = [];
@@ -158,5 +159,92 @@ $(document).ready(function(){
 		console.log(" " + city + " "  + city.length);
 		console.log(" " + year + " "  + year.length);
 		console.log(" " + height + " "  + height.length);
+		filters.push(gotra);
+		filters.push(occupation);
+		filters.push(city);
+		filters.push(year);
+		filters.push(height);
+		
+		searchProfiles("male", filters, 10000, 15, "en");
 	});
+	function searchProfiles(type, filters, profileId, total, language) {
+	    for (count = 0; count < total; count++) {
+		profileId = profileId + 1;
+		console.log("checking Profile ID: " + profileId);
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+			var profileData = this.responseText;
+			console.log("Profile :" + profileData);
+			var profile = JSON.parse(profileData);
+			var myStr = "<div class='col-md-4 GOTRA OCCUPATION CITY all'><div class='row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'><div class='col p-4 d-flex flex-column position-static'><strong class='d-inline-block text-success'>TYPE</strong><h3 class='mb-0'>NAME</h3><div class='mb-1 text-muted'>BIRTHDATE</div><div class=''>Height : <b><i>HEIGHT</i></b> </div><div class=''>Gotra : <b><i>GOTRA</i></b> </div><div class=''>Occupation : <b><i>OCCUPATION</i></b></div><div class=''>Work City : <b><i>CITY </i></b></div><a href='URL' class='' id='linkInfo'> More Info... </a></div></div></div>";
+			    
+			var matched = isMatched(filters, profile);   
+			if(type == profile.gender && matched === true) {
+			    if(language == "mr") {
+				myStr = replaceAll(myStr, 'Gotra', 'गोत्र');	    
+				myStr = replaceAll(myStr, 'Occupation', 'व्यवसाय');	    
+				myStr = replaceAll(myStr, 'Work City', 'कार्य शहर');	    
+				myStr = replaceAll(myStr, 'Height', 'उंची');	    
+			    }
+
+			    if(profile.gender == "male" && language == "en") {
+				myStr = replaceAll(myStr, 'TYPE', "Groom" + " [" + profile.id + "]");
+			    }else if(profile.gender == "male" && language == "mr") {
+				myStr = replaceAll(myStr, 'TYPE', "वर" + " [" + profile.id + "]");							    
+			    } else if(profile.gender == "female" && language == "en") {
+				myStr = replaceAll(myStr, 'TYPE', "Bride"+ " [" + profile.id + "]");							    
+			    } else if(profile.gender == "female" && language == "mr") {
+				myStr = replaceAll(myStr, 'TYPE', "वधू"+ " [" + profile.id + "]");							    
+			    }
+
+			    myStr = replaceAll(myStr, 'NAME', profile.firstName + " " + profile.lastName);	    
+			    if(language == "mr") {
+				myStr = replaceAll(myStr, 'NAME', profile.firstNameMr + " " + profile.lastNameMr);	    
+			    }
+			    myStr = replaceAll(myStr, 'BIRTHDATE', profile.birthDate.birthDay + "-" + profile.birthDate.birthMonth + "-" +profile.birthDate.birthYear + " " + profile.birthDate.birthTimeHr + ":"+ profile.birthDate.birthTimeMin);
+			    myStr = replaceAll(myStr, 'GOTRA', profile.gotra);
+			    myStr = replaceAll(myStr, 'OCCUPATION', profile.occupation);
+			    myStr = replaceAll(myStr, 'CITY', profile.address.district + " " + profile.address.city);
+			    myStr = replaceAll(myStr, 'HEIGHT', profile.height);
+			    myStr = replaceAll(myStr, 'URL', profile.url.bioData);
+			    document.getElementById("profiles").innerHTML = document.getElementById("profiles").innerHTML + myStr;
+			}
+		    }
+		    if (this.readyState == 4 && this.status != 200) {
+			$("#loadMoreProfileButton").hide();
+			count = total;    
+		    }
+		};
+		xhttp.open("GET", "profiles/groom/" + profileId + ".json", false);
+		xhttp.send();        
+	    }
+	}	
+	
+	function isMatched(filters, profile) {
+		var gotra = filters[0];
+		var occupation = filters[1];
+		var city = filters[2];
+		var year = filters[3];
+		var height = filters[4];
+		
+		var flag = false;
+		
+		if(gotra.length == 0 || occupation.includes(profile.gotra) ) {
+			flag = true;
+		}
+		if(occupation.length == 0 || occupation.includes(profile.occupation) ) {
+			flag = true;
+		}
+		if(city.length == 0 || city.includes(profile.address.city) ) {
+			flag = true;
+		}
+		//if(year.length == 0 || year.includes(profile.gotra) ) {
+		//	flag = true;
+		//}
+		//if(height.length == 0 || height.includes(profile.gotra) ) {
+		//	flag = true;
+		//}
+		return flag;
+	}
 });
