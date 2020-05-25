@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("#loadMoreProfileButton").hide();
+	//$("#loadMoreProfileButton").hide();
 	
 	function filterProfiles(profileId, total, language) { 
 		var filters = [];
