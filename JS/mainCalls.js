@@ -34,7 +34,6 @@ function loadSearchPageDetails(pageName, language) {
    loadPageInfo(pageName, language);
    loadFilters(pageName, language);
 }
-}
 
 function loadHelpPageDetails(pageName, language) {
    loadSiteInfo(pageName, language);
