@@ -10,6 +10,7 @@ $(document).ready(function(){
 		var year = [];
 		var height = [];
 		
+		document.getElementById("profiles").innerHTML = "";
 		if ($('#GotraFilter0').is(":checked") || $('#GotraFilter1').is(":checked") || $('#GotraFilter2').is(":checked") || $('#GotraFilter3').is(":checked") || $('#GotraFilter4').is(":checked") || $('#GotraFilter5').is(":checked")) {
 			if ($('#GotraFilter0').is(":checked")) {
 				gotra.push("0");
