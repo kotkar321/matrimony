@@ -153,6 +153,10 @@ $(document).ready(function(){
 		} else {
 			console.log('all height false');
 		}
-		
+		console.log(" " + gotra + " "  + gotra.length);
+		console.log(" " + occupation + " "  + occupation.length);
+		console.log(" " + city + " "  + city.length);
+		console.log(" " + year + " "  + year.length);
+		console.log(" " + height + " "  + height.length);
 	});
 });
