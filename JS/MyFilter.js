@@ -240,12 +240,18 @@ $(document).ready(function(){
 		
 		if(gotra.length == 0 || occupation.includes(profile.gotra) ) {
 			flag = true;
+		} else {
+			flag = false;
 		}
 		if(occupation.length == 0 || occupation.includes(profile.occupation) ) {
 			flag = true;
+		} else {
+			flag = false;
 		}
 		if(city.length == 0 || city.includes(profile.address.city) ) {
 			flag = true;
+		} else {
+			flag = false;
 		}
 		//if(year.length == 0 || year.includes(profile.gotra) ) {
 		//	flag = true;
