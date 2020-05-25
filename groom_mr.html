@@ -72,7 +72,7 @@
 		<script src="JS/loadProfile.js"></script>
 		<script>
 			$(document).ready(function(){
-				loadGroomPageDetails("groom","mr");
+				loadGroomPageDetails("groom", "mr");
 				$("#loadMoreProfileButton").click(function(){
 					var lastProfileId = $("#lastProfile").val();
 					fetchProfiles(Number(lastProfileId), 3, "male", "mr");
