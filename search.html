@@ -88,12 +88,10 @@
 		<script>
 			$(document).ready(function(){
 				loadSearchPageDetails("search","en");
-				
 				$("#loadMoreProfileButton").click(function(){
 					var lastProfileId = $("#lastProfile").val();
 					filterProfiles(Number(lastProfileId), 15, "en");
 				});
-				
 				$("#SearchFilterButton").click(function(){
 					var lastProfileId = 10000;
 					filterProfiles(lastProfileId, 15, "en");
