@@ -60,6 +60,12 @@
 			<div class="row mb-2" id="profiles">
 				
 			</div>
+			
+			<!-- Load More Result -->
+			<p>
+				<a id="loadMoreProfileButton" class="btn btn-light card"> Load More Profiles </a>
+				<input type="hidden" id="lastProfile" name="hidden" value="10000"><br>
+			</p>
 		</div>
 
 		<!-- Footer -->
@@ -82,6 +88,14 @@
 		<script>
 			$(document).ready(function(){
 				loadSearchPageDetails("search","en");
+				$("#loadMoreProfileButton").click(function(){
+					var lastProfileId = $("#lastProfile").val();
+					filterProfiles(lastProfileId, 15, "en");
+				});
+				$("#SearchFilterButton").click(function(){
+					var lastProfileId = "10000";
+					filterProfiles(lastProfileId, 15, "en");
+				}
 			});
 		</script>
 		
