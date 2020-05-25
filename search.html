@@ -91,7 +91,7 @@
 				
 				$("#loadMoreProfileButton").click(function(){
 					var lastProfileId = $("#lastProfile").val();
-					filterProfiles(lastProfileId, 15, "en");
+					filterProfiles(Number(lastProfileId), 15, "en");
 				});
 				
 				$("#SearchFilterButton").click(function(){
