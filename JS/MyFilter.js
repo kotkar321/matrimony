@@ -240,7 +240,7 @@ $(document).ready(function(){
 		var occupationFlag = false;
 		var cityFlag = false;
 		
-		if(gotra.length == 0 || occupation.includes(profile.gotra) ) {
+		if(gotra.length == 0 || gotra.includes(profile.gotra) ) {
 			gotraFlag = true;
 		} 
 		if(occupation.length == 0 || occupation.includes(profile.occupation) ) {
