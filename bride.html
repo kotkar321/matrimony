@@ -75,8 +75,12 @@
 				loadBridePageDetails("bride","en");
 				$("#loadMoreProfileButton").click(function(){
 					var lastProfileId = $("#lastProfile").val();
-					fetchProfiles(Number(lastProfileId), 3, "female", "en");
+					filterProfiles(lastProfileId, 15, "en");
 				});
+				$("#SearchFilterButton").click(function(){
+					var lastProfileId = "10000";
+					filterProfiles(lastProfileId, 15, "en");
+				}
 			});
 		</script>
 	</body>
