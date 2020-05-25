@@ -236,29 +236,30 @@ $(document).ready(function(){
 		var year = filters[3];
 		var height = filters[4];
 		
-		var flag = false;
+		var gotraFlag = false;
+		var occupationFlag = false;
+		var cityFlag = false;
 		
 		if(gotra.length == 0 || occupation.includes(profile.gotra) ) {
-			flag = true;
-		} else {
-			flag = false;
-		}
+			gotraFlag = true;
+		} 
 		if(occupation.length == 0 || occupation.includes(profile.occupation) ) {
-			flag = true;
-		} else {
-			flag = false;
-		}
+			occupationFlag = true;
+		} 
 		if(city.length == 0 || city.includes(profile.address.city) ) {
-			flag = true;
-		} else {
-			flag = false;
-		}
+			cityFlag = true;
+		} 
 		//if(year.length == 0 || year.includes(profile.gotra) ) {
 		//	flag = true;
 		//}
 		//if(height.length == 0 || height.includes(profile.gotra) ) {
 		//	flag = true;
 		//}
-		return flag;
+		
+		if(gotraFlag && occupationFlag && cityFlag) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 });
