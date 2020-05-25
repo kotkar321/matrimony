@@ -80,7 +80,7 @@
 		<script src="JS/loadProfile.js"></script>
 		<script>
 			$(document).ready(function(){
-				loadSamajPageDetails("search","mr");
+				loadSearchPageDetails("search","mr");
 				$("#loadMoreProfileButton").click(function(){
 					var lastProfileId = $("#lastProfile").val();
 					fetchProfiles(Number(lastProfileId), 3, "male", "mr");
