@@ -6,7 +6,7 @@
   "firstNameMr": "HarishMr",
   "lastNameMr": "KotkarMr",
   "gotra": "1",
-  "occupation": "5",
+  "occupation": "1",
   "height": "63",
   "birthDate": {
     "birthDay": "10",
@@ -17,7 +17,7 @@
   },
   "address": {
     "district": "3",
-    "city": "2"
+    "city": "1"
   },
   "url": {
     "photo": "index.html",
