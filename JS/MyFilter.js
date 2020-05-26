@@ -17,6 +17,7 @@ $(document).ready(function(){
 		$("#loadMoreFilterProfileButton").show();
 		$("#SearchFilterButton").addClass("disabled");
 		$("#loadMoreFilterProfileButton").addClass("disabled");
+		$("#loadMoreFilterProfileButton").val("Loading....");
 		
 		if ($('#GenderFilter0').is(":checked") || $('#GenderFilter1').is(":checked") || $('#GenderFilter2').is(":checked") || $('#GenderFilter3').is(":checked") || $('#GenderFilter4').is(":checked") || $('#GenderFilter5').is(":checked")) {
 			if ($('#GenderFilter0').is(":checked")) {
@@ -264,6 +265,7 @@ $(document).ready(function(){
 	    $("#lastProfile").val(profileId);
 	    $("#SearchFilterButton").removeClass("disabled");
 	    $("#loadMoreFilterProfileButton").removeClass("disabled");	
+	    $("#loadMoreFilterProfileButton").val("Load More Filtered Profiles");	
 	}	
 	
 	function isMatched(filters, profile) {
