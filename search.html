@@ -67,7 +67,7 @@
 			
 			<!-- Load More Result -->
 			<p>
-				<a id="loadMoreProfileButton" class="btn btn-light card"> Load More Profiles </a>
+				<a id="loadMoreFilterProfileButton" class="btn btn-light card"> Load More Profiles </a>
 				<input type="hidden" id="lastProfile" name="hidden" value="10000"><br>
 			</p>
 		</div>
@@ -92,10 +92,9 @@
 		<script>
 			$(document).ready(function(){
 				loadSearchPageDetails("search","en");
-				//$("#loadMoreProfileButton").click(function(){
-				//	var lastProfileId = $("#lastProfile").val();
-				//	filterProfiles(Number(lastProfileId), 15, "en");
-				//});
+				$("#loadMoreFilterProfileButton").click(function(){
+					$("#SearchFilterButton").click();
+				});
 				//$("#SearchFilterButton").click(function(){
 				//	filterProfiles(10000, 15, "en");
 				//});
