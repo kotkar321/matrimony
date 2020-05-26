@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	//$("#loadMoreProfileButton").hide();
+	$("#loadMoreProfileButton").hide();
 	$(".custom-checkbox").click(function(){
 		$("#lastProfile").val("10000");
 		//document.getElementById("profiles").innerHTML = "";
