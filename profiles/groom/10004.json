@@ -3,8 +3,8 @@
   "gender": "male",
   "firstName": "Harish",
   "lastName": "Kotkar",
-  "firstNameMr": "HarishMr",
-  "lastNameMr": "KotkarMr",
+  "firstNameMr": "हरिश",
+  "lastNameMr": "कोतकर",
   "gotra": "4",
   "occupation": "4",
   "height": "63",
@@ -16,7 +16,7 @@
     "birthTimeMin": "30"
   },
   "address": {
-    "district": "3",
+    "district": "4",
     "city": "4"
   },
   "url": {
