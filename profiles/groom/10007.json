@@ -1,12 +1,12 @@
 {
   "id": "10007",
-  "gender": "female",
+  "gender": "male",
   "firstName": "Harish",
   "lastName": "Kotkar",
-  "firstNameMr": "HarishMr",
-  "lastNameMr": "KotkarMr",
-  "gotra": "3",
-  "occupation": "5",
+  "firstNameMr": "हरिश",
+  "lastNameMr": "कोतकर",
+  "gotra": "2",
+  "occupation": "7",
   "height": "63",
   "birthDate": {
     "birthDay": "10",
