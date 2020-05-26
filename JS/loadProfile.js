@@ -10,6 +10,7 @@ function fetchProfiles(profileId, total, pageName, language) {
 	var occupationArrayMr = ["अभियंता","डॉक्टर","सीए","उद्योगपती","एंटरप्रेनर","बिल्डर","शिक्षक"," फरमार","बँकमॅनेजर","फार्मासिस्ट","एमआर","विमासल्लागार","इतर"];
 	
 	$("#loadMoreProfileButton").addClass("disabled");	
+	$("#loadMoreProfileButton").val("Loading...");
 	
 	for (count = 0; count < total; count++) {
 		profileId = profileId + 1;
@@ -66,5 +67,6 @@ function fetchProfiles(profileId, total, pageName, language) {
 		xhttp.send();        
 	}
 	$("#lastProfile").val(profileId);
-	$("#loadMoreProfileButton").removeClass("disabled");	
+	$("#loadMoreProfileButton").removeClass("disabled");
+	$("#loadMoreProfileButton").val("Load More Profiles");
 }
