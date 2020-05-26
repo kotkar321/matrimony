@@ -2,7 +2,6 @@ $(document).ready(function(){
 	$("#loadMoreFilterProfileButton").hide();
 	$(".custom-checkbox").click(function(){
 		$("#lastProfile").val("10000");
-		//document.getElementById("profiles").innerHTML = "";
 		$("#loadMoreProfileButton").hide();
 	});
 	
