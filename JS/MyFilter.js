@@ -1,5 +1,10 @@
 $(document).ready(function(){
 	//$("#loadMoreProfileButton").hide();
+	$(".custom-checkbox").click(function(){
+		$("#lastProfile").val("10000");
+		document.getElementById("profiles").innerHTML = "";
+		$("#loadMoreProfileButton").hide();
+	});
 	
 	$("#SearchFilterButton").click(function(){
 	//function filterProfiles(profileId, total, language) { 
