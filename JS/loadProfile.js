@@ -1,4 +1,11 @@
 function fetchProfiles(profileId, total, pageName, language) {
+    var genderArray = ["Groom","Bride"];
+    var gotraArray = ["Kashayp","Khalap","Mandav","Gahilam","Gautam","Lokaksha"];
+    var cityArray = ["Mumbai","Pune","Nasik","Nagpur","Aurangabad","Dhule","Jalgaon","Nandurbar","Surat","ForeignCountry","Other"];
+    var occupationArray =["Engineer","Doctor","CA","Businessman","Enterpreneur","Builder","Teacher","Farmar","BankManager","Pharmacist","MR","InsuranceAdvisor","Other"];
+    var yearArray = ["Before 1985","1985 To 1990","1991 To 1995","1996 to 2000","After 2000"];
+    var heightArray = ["5.0-"," 5.1 to 5.6"," 5.7 to 6.0"," 6.1 To 6.6"," 6.7 To 7.0"," 7.0+"];
+    
     for (count = 0; count < total; count++) {
         profileId = profileId + 1;
         console.log("fetching Profile ID: " + profileId);
@@ -33,9 +40,9 @@ function fetchProfiles(profileId, total, pageName, language) {
                         myStr = replaceAll(myStr, 'NAME', profile.firstNameMr + " " + profile.lastNameMr);	    
                     }
                     myStr = replaceAll(myStr, 'BIRTHDATE', profile.birthDate.birthDay + "-" + profile.birthDate.birthMonth + "-" +profile.birthDate.birthYear + " " + profile.birthDate.birthTimeHr + ":"+ profile.birthDate.birthTimeMin);
-                    myStr = replaceAll(myStr, 'GOTRA', profile.gotra);
-                    myStr = replaceAll(myStr, 'OCCUPATION', profile.occupation);
-                    myStr = replaceAll(myStr, 'CITY', profile.address.district + " " + profile.address.city);
+                    myStr = replaceAll(myStr, 'GOTRA', gotraArray[profile.gotra]);
+                    myStr = replaceAll(myStr, 'OCCUPATION', occupationArray[profile.occupation]);
+                    myStr = replaceAll(myStr, 'CITY', cityArray[profile.address.city]);
                     myStr = replaceAll(myStr, 'HEIGHT', profile.height);
                     myStr = replaceAll(myStr, 'URL', profile.url.bioData);
                     document.getElementById("profiles").innerHTML = document.getElementById("profiles").innerHTML + myStr;
