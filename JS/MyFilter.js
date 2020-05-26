@@ -316,9 +316,9 @@ $(document).ready(function(){
 	}
 		
 	function getYearCategory(year) {
-		var yearFilter0 = ["1980","1981","1983","1983","1984"];
-		var yearFilter1 = ["1985","1987","1987","1988","1989"];
-		var yearFilter2 = ["1990","1991","1993","1993","1994"];
+		var yearFilter0 = ["1980","1981","1982","1983","1984"];
+		var yearFilter1 = ["1985","1986","1987","1988","1989"];
+		var yearFilter2 = ["1990","1991","1992","1993","1994"];
 		var yearFilter3 = ["1995","1996","1997","1998","1999"];
 		var yearFilter4 = ["2000","2001","2002","2003","2004"];
 		if(yearFilter0.includes(year)) {
