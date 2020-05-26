@@ -6,7 +6,7 @@ function loadHomePageDetails(pageName, language) {
 function loadGroomPageDetails(pageName, language) {
    loadSiteInfo(pageName, language);
    loadPageInfo(pageName, language);
-   fetchProfiles(10000, 3, "male", language);
+   fetchProfiles(10000, 3, "0", language);
    //loadProfiles(pageName, language);
    //loadFilters(pageName, language);
 }
@@ -14,7 +14,7 @@ function loadGroomPageDetails(pageName, language) {
 function loadBridePageDetails(pageName, language) {
    loadSiteInfo(pageName, language);
    loadPageInfo(pageName, language);
-   fetchProfiles(10000, 3, "female", language);
+   fetchProfiles(10000, 3, "1", language);
    //loadProfiles(pageName, language);
    //loadFilters(pageName, language);
 }
