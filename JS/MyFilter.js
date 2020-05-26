@@ -202,8 +202,10 @@ $(document).ready(function(){
 			    } else if(profile.gender == "female" && language == "mr") {
 				myStr = replaceAll(myStr, 'TYPE', "वधू"+ " [" + profile.id + "]");							    
 			    }
-
-			    myStr = replaceAll(myStr, 'NAME', profile.firstName + " " + profile.lastName);	    
+			
+			    if(language == "en") {
+				myStr = replaceAll(myStr, 'NAME', profile.firstName + " " + profile.lastName);	    
+			    }
 			    if(language == "mr") {
 				myStr = replaceAll(myStr, 'NAME', profile.firstNameMr + " " + profile.lastNameMr);	    
 			    }
@@ -223,7 +225,7 @@ $(document).ready(function(){
 			$("#loadMoreProfileButton").show();
 		    }
 		};
-		xhttp.open("GET", "profiles/groom/" + profileId + ".json", false);
+		xhttp.open("GET", "profiles/groom/" + profileId + ".json", true);
 		xhttp.send();        
 	    }
 	    $("#lastProfile").val(profileId);
