@@ -15,6 +15,8 @@ $(document).ready(function(){
 		var year = [];
 		var height = [];
 		$("#loadMoreFilterProfileButton").show();
+		$("#SearchFilterButton").addClass("disabled");
+		$("#loadMoreFilterProfileButton").addClass("disabled");
 		
 		if ($('#GenderFilter0').is(":checked") || $('#GenderFilter1').is(":checked") || $('#GenderFilter2').is(":checked") || $('#GenderFilter3').is(":checked") || $('#GenderFilter4').is(":checked") || $('#GenderFilter5').is(":checked")) {
 			if ($('#GenderFilter0').is(":checked")) {
@@ -260,6 +262,8 @@ $(document).ready(function(){
 		xhttp.send();
 	    }
 	    $("#lastProfile").val(profileId);
+	    $("#SearchFilterButton").removeClass("disabled");
+	    $("#loadMoreFilterProfileButton").removeClass("disabled");	
 	}	
 	
 	function isMatched(filters, profile) {
