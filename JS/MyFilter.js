@@ -212,13 +212,13 @@ $(document).ready(function(){
 				myStr = replaceAll(myStr, 'Height', 'उंची');	    
 			    }
 
-			    if(profile.gender == "male" && language == "en") {
+			    if(profile.gender == "0" && language == "en") {
 				myStr = replaceAll(myStr, 'TYPE', "Groom" + " [" + profile.id + "]");
-			    }else if(profile.gender == "male" && language == "mr") {
+			    }else if(profile.gender == "0" && language == "mr") {
 				myStr = replaceAll(myStr, 'TYPE', "वर" + " [" + profile.id + "]");							    
-			    } else if(profile.gender == "female" && language == "en") {
+			    } else if(profile.gender == "1" && language == "en") {
 				myStr = replaceAll(myStr, 'TYPE', "Bride"+ " [" + profile.id + "]");							    
-			    } else if(profile.gender == "female" && language == "mr") {
+			    } else if(profile.gender == "1" && language == "mr") {
 				myStr = replaceAll(myStr, 'TYPE', "वधू"+ " [" + profile.id + "]");							    
 			    }
 			
