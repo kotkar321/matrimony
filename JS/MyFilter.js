@@ -290,7 +290,7 @@ $(document).ready(function(){
 		//	flag = true;
 		//}
 		
-		if(gotraFlag && occupationFlag && cityFlag) {
+		if(genderFlag && gotraFlag && occupationFlag && cityFlag) {
 			return true;
 		} else {
 			return false;
