@@ -238,14 +238,16 @@ $(document).ready(function(){
 			$("#loadMoreProfileButton").show();
 		    }
 		};
-		var gender = filters[0];
-		if(gender.includes("0") ) {
-		   xhttp.open("GET", "profiles/groom/" + profileId + ".json", true);
-		   xhttp.send();        
-		} else if(gender.includes("1") ) {
-	 	   xhttp.open("GET", "profiles/bride/" + profileId + ".json", true);	
-		   xhttp.send();        
-		}
+		//var gender = filters[0];
+		//if(gender.includes("0") ) {
+		//   xhttp.open("GET", "profiles/groom/" + profileId + ".json", true);
+		//   xhttp.send();        
+		//} else if(gender.includes("1") ) {
+	 	//   xhttp.open("GET", "profiles/bride/" + profileId + ".json", true);	
+		//   xhttp.send();        
+		//}
+		xhttp.open("GET", "profiles/groom/" + profileId + ".json", true);
+		xhttp.send();
 	    }
 	    $("#lastProfile").val(profileId);
 	}	
