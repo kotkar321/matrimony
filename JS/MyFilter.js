@@ -248,6 +248,9 @@ $(document).ready(function(){
 			    }
 			    document.getElementById("profiles").innerHTML = document.getElementById("profiles").innerHTML + myStr;
 			}
+			else {
+			    count--;
+			}    
 		    }
 		    if (this.readyState == 4 && this.status != 200) {
 			$("#loadMoreFilterProfileButton").hide();
@@ -262,7 +265,7 @@ $(document).ready(function(){
 	 	//   xhttp.open("GET", "profiles/bride/" + profileId + ".json", true);	
 		//   xhttp.send();        
 		//}
-		xhttp.open("GET", "profiles/groom/" + profileId + ".json", true);
+		xhttp.open("GET", "profiles/groom/" + profileId + ".json", false);
 		xhttp.send();
 	    }
 	    $("#lastProfile").val(profileId);
