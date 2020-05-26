@@ -3,6 +3,7 @@ $(document).ready(function(){
 	$(".custom-checkbox").click(function(){
 		$("#lastProfile").val("10000");
 		$("#loadMoreProfileButton").hide();
+		document.getElementById("profiles").innerHTML = "";
 	});
 	
 	$("#SearchFilterButton").click(function(){
@@ -14,8 +15,8 @@ $(document).ready(function(){
 		var city = [];
 		var year = [];
 		var height = [];
+		$("#loadMoreProfileButton").show();
 		
-		document.getElementById("profiles").innerHTML = "";
 		if ($('#GenderFilter0').is(":checked") || $('#GenderFilter1').is(":checked") || $('#GenderFilter2').is(":checked") || $('#GenderFilter3').is(":checked") || $('#GenderFilter4').is(":checked") || $('#GenderFilter5').is(":checked")) {
 			if ($('#GenderFilter0').is(":checked")) {
 				gender.push("0");
@@ -240,9 +241,7 @@ $(document).ready(function(){
 		    if (this.readyState == 4 && this.status != 200) {
 			$("#loadMoreProfileButton").hide();
 			count = total;    
-		    } else {
-			$("#loadMoreProfileButton").show();
-		    }
+		    } 
 		};
 		//var gender = filters[0];
 		//if(gender.includes("0") ) {
