@@ -24,7 +24,7 @@
 				    });
 			    }
 			  };
-			  xhttp.open("GET", "properties/"+ pageName +"_"+ language + ".properties?t="+ Math.random(), true);
+			  xhttp.open("GET", "properties/"+ pageName +"_"+ language + ".properties, true);
 			  xhttp.send();
 			}
 	
@@ -50,7 +50,7 @@
 				    });
 			    }
 			  };
-			  xhttp.open("GET", "properties/CommonInfo_" + language + ".properties?t="+ Math.random(), true);
+			  xhttp.open("GET", "properties/CommonInfo_" + language + ".properties", true);
 			  xhttp.send();
 			}
 
@@ -120,7 +120,7 @@
 				    });
 			    }
 			  };
-			  xhttp.open("GET", "CSV/filters_" + language + ".csv?t="+ Math.random(), false);
+			  xhttp.open("GET", "CSV/filters_" + language + ".csv", false);
 			  xhttp.send();
 			}
 
