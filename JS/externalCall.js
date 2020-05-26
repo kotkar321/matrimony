@@ -69,6 +69,14 @@
 					    }
 					    var keys = values[0].split(",");
 					    if(keys[0] == "1") {						    
+						document.getElementById("genderFilterText").innerHTML = keys[1];
+						var filters = values[1].split(",");
+						$.each(filters, function(count, dataValue){
+							if(dataValue !== undefined || dataValue != "") {    
+								document.getElementById("GenderFilter_"+count).innerHTML = dataValue;
+							}
+						});
+					    } else if(keys[0] == "2") {						    
 						document.getElementById("gotraFilterText").innerHTML = keys[1];
 						var filters = values[1].split(",");
 						$.each(filters, function(count, dataValue){
@@ -76,7 +84,7 @@
 								document.getElementById("GotraFilter_"+count).innerHTML = dataValue;
 							}
 						});
-					    } else if(keys[0] == "2") {
+					    } else if(keys[0] == "3") {
 						document.getElementById("cityFilterText").innerHTML = keys[1];
 					    	var filters = values[1].split(",");
 						$.each(filters, function(count, dataValue){
@@ -84,7 +92,7 @@
 								document.getElementById("cityFilter_"+count).innerHTML = dataValue;
 							}
 						});
-					    } else if(keys[0] == "3") {	
+					    } else if(keys[0] == "4") {	
 						document.getElementById("occupationFilterText").innerHTML = keys[1];
 					    	var filters = values[1].split(",");
 						$.each(filters, function(count, dataValue){
@@ -92,7 +100,7 @@
 								document.getElementById("occupationFilter_"+count).innerHTML = dataValue;
 							}
 						});
-					    } else if(keys[0] == "4") {	
+					    } else if(keys[0] == "5") {	
 						document.getElementById("birthFilterText").innerHTML = keys[1];
 					    	var filters = values[1].split(",");
 						$.each(filters, function(count, dataValue){
@@ -100,7 +108,7 @@
 								document.getElementById("BirthFilter_"+count).innerHTML = dataValue;
 							}
 						});
-					    } else if(keys[0] == "5") {	
+					    } else if(keys[0] == "6") {	
 						document.getElementById("heightFilterText").innerHTML = keys[1];
 					    	var filters = values[1].split(",");
 						$.each(filters, function(count, dataValue){
