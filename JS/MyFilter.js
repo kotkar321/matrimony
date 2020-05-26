@@ -4,6 +4,7 @@ $(document).ready(function(){
 	$("#SearchFilterButton").click(function(){
 	//function filterProfiles(profileId, total, language) { 
 		var filters = [];
+		var gender = [];
 		var gotra = [];
 		var occupation = [];
 		var city = [];
@@ -11,6 +12,17 @@ $(document).ready(function(){
 		var height = [];
 		
 		document.getElementById("profiles").innerHTML = "";
+		if ($('#GenderFilter0').is(":checked") || $('#GenderFilter1').is(":checked") || $('#GenderFilter2').is(":checked") || $('#GenderFilter3').is(":checked") || $('#GenderFilter4').is(":checked") || $('#GenderFilter5').is(":checked")) {
+			if ($('#GenderFilter0').is(":checked")) {
+				gender.push("0");
+			}
+			if ($('#GenderFilter1').is(":checked")) {
+				gender.push("1");
+			}
+		} else {
+			console.log('all gender false');
+		}
+		
 		if ($('#GotraFilter0').is(":checked") || $('#GotraFilter1').is(":checked") || $('#GotraFilter2').is(":checked") || $('#GotraFilter3').is(":checked") || $('#GotraFilter4').is(":checked") || $('#GotraFilter5').is(":checked")) {
 			if ($('#GotraFilter0').is(":checked")) {
 				gotra.push("0");
@@ -163,16 +175,17 @@ $(document).ready(function(){
 		console.log(" " + city + " "  + city.length);
 		console.log(" " + year + " "  + year.length);
 		console.log(" " + height + " "  + height.length);
+		filters.push(gender);
 		filters.push(gotra);
 		filters.push(occupation);
 		filters.push(city);
 		filters.push(year);
 		filters.push(height);
 		
-		searchProfiles("male", filters, 10000, 15, "en");
+		searchProfiles(filters, 10000, 15, "en");
 	});
 	
-	function searchProfiles(type, filters, profileId, total, language) {
+	function searchProfiles(filters, profileId, total, language) {
 	    for (count = 0; count < total; count++) {
 		profileId = profileId + 1;
 		console.log("checking Profile ID: " + profileId);
@@ -185,7 +198,7 @@ $(document).ready(function(){
 			var myStr = "<div class='col-md-4 GOTRA OCCUPATION CITY all'><div class='row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative'><div class='col p-4 d-flex flex-column position-static'><strong class='d-inline-block text-success'>TYPE</strong><h3 class='mb-0'>NAME</h3><div class='mb-1 text-muted'>BIRTHDATE</div><div class=''>Height : <b><i>HEIGHT</i></b> </div><div class=''>Gotra : <b><i>GOTRA</i></b> </div><div class=''>Occupation : <b><i>OCCUPATION</i></b></div><div class=''>Work City : <b><i>CITY </i></b></div><a href='URL' class='' id='linkInfo'> More Info... </a></div></div></div>";
 			    
 			var matched = isMatched(filters, profile);   
-			if(type == profile.gender && matched === true) {
+			if(matched === true) {
 			    if(language == "mr") {
 				myStr = replaceAll(myStr, 'Gotra', 'गोत्र');	    
 				myStr = replaceAll(myStr, 'Occupation', 'व्यवसाय');	    
@@ -225,23 +238,34 @@ $(document).ready(function(){
 			$("#loadMoreProfileButton").show();
 		    }
 		};
-		xhttp.open("GET", "profiles/groom/" + profileId + ".json", true);
-		xhttp.send();        
+		var gender = filters[0];
+		if(gender.includes("0") ) {
+		   xhttp.open("GET", "profiles/groom/" + profileId + ".json", true);
+		   xhttp.send();        
+		} else if(gender.includes("1") ) {
+	 	   xhttp.open("GET", "profiles/bride/" + profileId + ".json", true);	
+		   xhttp.send();        
+		}
 	    }
 	    $("#lastProfile").val(profileId);
 	}	
 	
 	function isMatched(filters, profile) {
-		var gotra = filters[0];
-		var occupation = filters[1];
-		var city = filters[2];
-		var year = filters[3];
-		var height = filters[4];
+		var gender = filters[0];
+		var gotra = filters[1];
+		var occupation = filters[2];
+		var city = filters[3];
+		var year = filters[4];
+		var height = filters[5];
 		
+		var genderFlag = false;
 		var gotraFlag = false;
 		var occupationFlag = false;
 		var cityFlag = false;
 		
+		if(gender.length == 0 || gender.includes(profile.gender) ) {
+			genderFlag = true;
+		} 
 		if(gotra.length == 0 || gotra.includes(profile.gotra) ) {
 			gotraFlag = true;
 		} 
