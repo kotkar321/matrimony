@@ -2,7 +2,7 @@ $(document).ready(function(){
 	//$("#loadMoreProfileButton").hide();
 	$(".custom-checkbox").click(function(){
 		$("#lastProfile").val("10000");
-		document.getElementById("profiles").innerHTML = "";
+		//document.getElementById("profiles").innerHTML = "";
 		$("#loadMoreProfileButton").hide();
 	});
 	
@@ -187,7 +187,9 @@ $(document).ready(function(){
 		filters.push(year);
 		filters.push(height);
 		var lastProfileId = Number($("#lastProfile").val());
-		searchProfiles(filters, lastProfileId, 15, "en");
+		var language = $("#language").val();
+		var totalFilterProfile = Number($("#totalFilterProfile").val());
+		searchProfiles(filters, lastProfileId, totalFilterProfile, language);
 	});
 	
 	function searchProfiles(filters, profileId, total, language) {
