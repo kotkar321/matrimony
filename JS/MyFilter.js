@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$("#loadMoreFilterProfileButton").hide();
 	$(".custom-checkbox").click(function(){
 		$("#lastProfile").val("10000");
-		$("#loadMoreProfileButton").hide();
+		$("#loadMoreFilterProfileButton").hide();
 		document.getElementById("profiles").innerHTML = "";
 	});
 	
@@ -15,7 +15,7 @@ $(document).ready(function(){
 		var city = [];
 		var year = [];
 		var height = [];
-		$("#loadMoreProfileButton").show();
+		$("#loadMoreFilterProfileButton").show();
 		
 		if ($('#GenderFilter0').is(":checked") || $('#GenderFilter1').is(":checked") || $('#GenderFilter2').is(":checked") || $('#GenderFilter3').is(":checked") || $('#GenderFilter4').is(":checked") || $('#GenderFilter5').is(":checked")) {
 			if ($('#GenderFilter0').is(":checked")) {
@@ -239,7 +239,7 @@ $(document).ready(function(){
 			}
 		    }
 		    if (this.readyState == 4 && this.status != 200) {
-			$("#loadMoreProfileButton").hide();
+			$("#loadMoreFilterProfileButton").hide();
 			count = total;    
 		    } 
 		};
