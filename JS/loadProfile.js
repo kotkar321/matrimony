@@ -8,7 +8,9 @@ function fetchProfiles(profileId, total, pageName, language) {
 	var gotraArrayMr = ["काशैप","खलाप","मांडव","गहिलम","गौतम","लोकाक्ष"];
 	var cityArrayMr = ["मुंबई","पुणे","नाशिक","नागपूर","औरंगाबाद","धुळे","जळगाव","नंदुरबार","सूरत","परराष्ट्र","इतर"];
 	var occupationArrayMr = ["अभियंता","डॉक्टर","सीए","उद्योगपती","एंटरप्रेनर","बिल्डर","शिक्षक"," फरमार","बँकमॅनेजर","फार्मासिस्ट","एमआर","विमासल्लागार","इतर"];
-    
+	
+	$("#loadMoreProfileButton").addClass("disabled");	
+	
 	for (count = 0; count < total; count++) {
 		profileId = profileId + 1;
 		console.log("fetching Profile ID: " + profileId);
@@ -62,6 +64,7 @@ function fetchProfiles(profileId, total, pageName, language) {
 		};
 		xhttp.open("GET", "profiles/groom/" + profileId + ".json", false);
 		xhttp.send();        
-		}
-		$("#lastProfile").val(profileId);
+	}
+	$("#lastProfile").val(profileId);
+	$("#loadMoreProfileButton").removeClass("disabled");	
 }
