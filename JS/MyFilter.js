@@ -287,6 +287,7 @@ $(document).ready(function(){
 		var gotraFlag = false;
 		var occupationFlag = false;
 		var cityFlag = false;
+		var yearFlag = false;
 		
 		if(gender.length == 0 || gender.includes(profile.gender) ) {
 			genderFlag = true;
@@ -300,17 +301,36 @@ $(document).ready(function(){
 		if(city.length == 0 || city.includes(profile.address.city) ) {
 			cityFlag = true;
 		} 
-		//if(year.length == 0 || year.includes(profile.gotra) ) {
-		//	flag = true;
-		//}
+		if(year.length == 0 || year.includes(getYearCategory(profile.birthDate.birthYear))) {
+			yearFlag = true;
+		}
 		//if(height.length == 0 || height.includes(profile.gotra) ) {
 		//	flag = true;
 		//}
 		
-		if(genderFlag && gotraFlag && occupationFlag && cityFlag) {
+		if(genderFlag && gotraFlag && occupationFlag && cityFlag && yearFlag) {
 			return true;
 		} else {
 			return false;
+		}
+	}
+		
+	function getYearCategory(year) {
+		var yearFilter0 = ["1980","1981","1983","1983","1984"];
+		var yearFilter1 = ["1985","1987","1987","1988","1989"];
+		var yearFilter2 = ["1990","1991","1993","1993","1994"];
+		var yearFilter3 = ["1995","1996","1997","1998","1999"];
+		var yearFilter4 = ["2000","2001","2002","2003","2004"];
+		if(yearFilter0.includes(year)) {
+			return "0";	
+		} else if(yearFilter1.includes(year)) {
+			return "1";	
+		} else if(yearFilter2.includes(year)) {
+			return "2";	
+		} else if(yearFilter3.includes(year)) {
+			return "3";	
+		} else if(yearFilter4.includes(year)) {
+			return "4";	
 		}
 	}
 });
