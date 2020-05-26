@@ -99,9 +99,8 @@
 		<script>
 			$(document).ready(function(){
 				loadSearchPageDetails("search","mr");
-				$("#loadMoreProfileButton").click(function(){
-					var lastProfileId = $("#lastProfile").val();
-					fetchProfiles(Number(lastProfileId), 3, "male", "mr");
+				$("#loadMoreFilterProfileButton").click(function(){
+					$("#SearchFilterButton").click();
 				});
 			});
 		</script>
