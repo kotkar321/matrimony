@@ -181,8 +181,8 @@ $(document).ready(function(){
 		filters.push(city);
 		filters.push(year);
 		filters.push(height);
-		
-		searchProfiles(filters, 10000, 15, "en");
+		var lastProfileId = Number($("#lastProfile").val());
+		searchProfiles(filters, lastProfileId, 15, "en");
 	});
 	
 	function searchProfiles(filters, profileId, total, language) {
