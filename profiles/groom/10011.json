@@ -3,10 +3,10 @@
   "gender": "female",
   "firstName": "Harish",
   "lastName": "Kotkar",
-  "firstNameMr": "HarishMr",
-  "lastNameMr": "KotkarMr",
-  "gotra": "3",
-  "occupation": "5",
+  "firstNameMr": "हरिश",
+  "lastNameMr": "कोतकर",
+  "gotra": "0",
+  "occupation": "0",
   "height": "63",
   "birthDate": {
     "birthDay": "10",
@@ -17,7 +17,7 @@
   },
   "address": {
     "district": "3",
-    "city": "2"
+    "city": "0"
   },
   "url": {
     "photo": "index.html",
