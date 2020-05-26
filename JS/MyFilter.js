@@ -192,10 +192,11 @@ $(document).ready(function(){
 	});
 	
 	function searchProfiles(filters, profileId, total, language) {
+		var genderArray = ["Groom","Bride"];
 		var gotraArray = ["Kashayp","Khalap","Mandav","Gahilam","Gautam","Lokaksha"];
 		var cityArray = ["Mumbai","Pune","Nasik","Nagpur","Aurangabad","Dhule","Jalgaon","Nandurbar","Surat","ForeignCountry","Other"];
 		var occupationArray =["Engineer","Doctor","CA","Businessman","Enterpreneur","Builder","Teacher","Farmar","BankManager","Pharmacist","MR","InsuranceAdvisor","Other"];
-		
+		var genderArrayMr = ["वर","वधू"];
 		var gotraArrayMr = ["काशैप","खलाप","मांडव","गहिलम","गौतम","लोकाक्ष"];
 		var cityArrayMr = ["मुंबई","पुणे","नाशिक","नागपूर","औरंगाबाद","धुळे","जळगाव","नंदुरबार","सूरत","परराष्ट्र","इतर"];
 	    	var occupationArrayMr = ["अभियंता","डॉक्टर","सीए","उद्योगपती","एंटरप्रेनर","बिल्डर","शिक्षक"," फरमार","बँकमॅनेजर","फार्मासिस्ट","एमआर","विमासल्लागार","इतर"];		
@@ -219,17 +220,8 @@ $(document).ready(function(){
 				myStr = replaceAll(myStr, 'Height', 'उंची');	    
 			    }
 
-			    if(profile.gender == "0" && language == "en") {
-				myStr = replaceAll(myStr, 'TYPE', "Groom" + " [" + profile.id + "]");
-			    }else if(profile.gender == "0" && language == "mr") {
-				myStr = replaceAll(myStr, 'TYPE', "वर" + " [" + profile.id + "]");							    
-			    } else if(profile.gender == "1" && language == "en") {
-				myStr = replaceAll(myStr, 'TYPE', "Bride"+ " [" + profile.id + "]");							    
-			    } else if(profile.gender == "1" && language == "mr") {
-				myStr = replaceAll(myStr, 'TYPE', "वधू"+ " [" + profile.id + "]");							    
-			    }
-			
 			    if(language == "en") {
+				myStr = replaceAll(myStr, 'TYPE', genderArray[profile.gender] + " [" + profile.id + "]");
 				myStr = replaceAll(myStr, 'NAME', profile.firstName + " " + profile.lastName);	    
 				myStr = replaceAll(myStr, 'BIRTHDATE', profile.birthDate.birthDay + "-" + profile.birthDate.birthMonth + "-" +profile.birthDate.birthYear + " " + profile.birthDate.birthTimeHr + ":"+ profile.birthDate.birthTimeMin);
 				myStr = replaceAll(myStr, 'GOTRA', gotraArray[profile.gotra]);
@@ -239,6 +231,7 @@ $(document).ready(function(){
 				myStr = replaceAll(myStr, 'URL', profile.url.bioData);
 			    }
 			    if(language == "mr") {
+				myStr = replaceAll(myStr, 'TYPE', genderArrayMr[profile.gender] + " [" + profile.id + "]");
 				myStr = replaceAll(myStr, 'NAME', profile.firstNameMr + " " + profile.lastNameMr);	    
 				myStr = replaceAll(myStr, 'BIRTHDATE', profile.birthDate.birthDay + "-" + profile.birthDate.birthMonth + "-" +profile.birthDate.birthYear + " " + profile.birthDate.birthTimeHr + ":"+ profile.birthDate.birthTimeMin);
 				myStr = replaceAll(myStr, 'GOTRA', gotraArrayMr[profile.gotra]);
@@ -246,7 +239,7 @@ $(document).ready(function(){
 				myStr = replaceAll(myStr, 'CITY', cityArrayMr[profile.address.city]);
 				myStr = replaceAll(myStr, 'HEIGHT', profile.height);
 				myStr = replaceAll(myStr, 'URL', profile.url.bioData);
-			    }	
+			    }
 			    document.getElementById("profiles").innerHTML = document.getElementById("profiles").innerHTML + myStr;
 			}
 		    }
