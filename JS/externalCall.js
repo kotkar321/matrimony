@@ -24,7 +24,7 @@
 				    });
 			    }
 			  };
-			  xhttp.open("GET", "properties/"+ pageName +"_"+ language + ".properties, true);
+			  xhttp.open("GET", "properties/"+ pageName +"_"+ language + ".properties", true);
 			  xhttp.send();
 			}
 	
